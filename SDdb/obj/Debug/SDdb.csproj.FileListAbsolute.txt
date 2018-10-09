@@ -1,0 +1,5 @@
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SDdb\bin\Debug\SDdb.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SDdb\bin\Debug\SDdb.pdb
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SDdb\obj\Debug\SDdb.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SDdb\obj\Debug\SDdb.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SDdb\obj\Debug\SDdb.pdb

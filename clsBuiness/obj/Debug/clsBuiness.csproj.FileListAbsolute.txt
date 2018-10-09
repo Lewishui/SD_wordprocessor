@@ -1,0 +1,13 @@
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\clsBuiness.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\clsBuiness.pdb
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\MySql.Data.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\MySql.Data.Entity.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\SDdb.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\SDdb.pdb
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.pdb
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\System.Data.SQLite.xml
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Order.Common.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Order.Common.pdb

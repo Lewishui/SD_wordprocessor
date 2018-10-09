@@ -1,0 +1,43 @@
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\bin\Debug\Order.Common.dll
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\bin\Debug\Order.Common.pdb
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\bin\Debug\office.dll
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\bin\Debug\office.xml
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\obj\Debug\Order.Common.dll
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\obj\Debug\Order.Common.pdb
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\bin\Debug\MySql.Data.dll
+C:\mysteap\work_office\ProjectOut\JN订单管理\JNOrderManagermentSystem\Order.Common\bin\Debug\MySql.Data.Entity.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Order.Common.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Order.Common.pdb
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\MySql.Data.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\MySql.Data.Entity.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\office.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\office.xml
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.dll
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.pdb
+C:\mysteap\work_office\ProjectOut\HRB彩票\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Order.Common.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\Order.Common.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\obj\Debug\Order.Common.pdb
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\System.Data.SQLite.dll
+D:\Dev Project\HRB_LO\HRB_LotteryManagermentSystem\Order.Common\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Dev Project\autosendmail\HTmail\Order.Common\bin\Debug\Order.Common.dll
+D:\Dev Project\autosendmail\HTmail\Order.Common\bin\Debug\Order.Common.pdb
+D:\Dev Project\autosendmail\HTmail\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
+D:\Dev Project\autosendmail\HTmail\Order.Common\obj\Debug\Order.Common.dll
+D:\Dev Project\autosendmail\HTmail\Order.Common\obj\Debug\Order.Common.pdb
+F:\mysteap\Devpro\HTTPmail\HTmail\Order.Common\bin\Debug\Order.Common.dll
+F:\mysteap\Devpro\HTTPmail\HTmail\Order.Common\bin\Debug\Order.Common.pdb
+F:\mysteap\Devpro\HTTPmail\HTmail\Order.Common\obj\Debug\Order.Common.dll
+F:\mysteap\Devpro\HTTPmail\HTmail\Order.Common\obj\Debug\Order.Common.pdb
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\Order.Common\bin\Debug\Order.Common.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\Order.Common\bin\Debug\Order.Common.pdb
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\Order.Common\obj\Debug\Order.Common.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\Order.Common\obj\Debug\Order.Common.pdb
