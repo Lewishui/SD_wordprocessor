@@ -175,5 +175,11 @@ namespace SD_wordprocessor
 
             }
         }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RowRemark = e.RowIndex;
+            cloumn = e.ColumnIndex;
+        }
     }
 }

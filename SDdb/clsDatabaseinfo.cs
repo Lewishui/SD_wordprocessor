@@ -24,6 +24,7 @@ namespace SDdb
         public string Createdate { get; set; }
         public string AdminIS { get; set; }
         public string jigoudaima { get; set; }
+        public string userTime { get; set; }
     }
  
 

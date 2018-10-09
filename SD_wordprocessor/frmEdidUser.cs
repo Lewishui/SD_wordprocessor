@@ -94,9 +94,14 @@ namespace SD_wordprocessor
             else
                 item.AdminIS = "false";
             item.jigoudaima = this.comboBox1.Text.Trim();
+            if (item.jigoudaima=="普通")
+            {
+                item.userTime = textBox7.Text;
+            }
+
             userlist_Server.Add(item);
             clsAllnew BusinessHelp = new clsAllnew();
-
+            BusinessHelp.deleteUSER(item.name);
             BusinessHelp.createUser_Server(userlist_Server);
 
             MessageBox.Show("创建用户成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -173,6 +178,23 @@ namespace SD_wordprocessor
             this.textBox5.Text = "";
 
             this.textBox6.Text = "";
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "普通")
+            {
+
+                label11.Visible = true;
+                textBox7.Visible = true;
+            }
+            else
+            {
+                label11.Visible = false;
+                textBox7.Visible = false;
+            
+            }
+
         }
     }
 }

@@ -23,8 +23,9 @@ namespace SD_wordprocessor
         Sunisoft.IrisSkin.SkinEngine se = null;
         frmAboutBox aboutbox;
         private System.Timers.Timer timerAlter1;
-        int logis = 0; 
+        int logis = 0;
         bool is_AdminIS;
+        int shengyuLogintime;
 
         public frmlogin()
         {
@@ -156,12 +157,19 @@ namespace SD_wordprocessor
                     item.name = txtSAPUserId.Text.Trim();
 
                     item.denglushijian = DateTime.Now.ToString("yyyyMMdd-HH:mm:ss");
+                    if (is_AdminIS == false)
+                    {
+                        if (shengyuLogintime == 0)
+                            shengyuLogintime = 1;
 
-
+                        item.userTime = (shengyuLogintime - 1).ToString();
+                    }
                     userlist_Server.Add(item);
                     clsAllnew BusinessHelp = new clsAllnew();
 
                     BusinessHelp.updateLoginTime_Server(userlist_Server);
+                    if (is_AdminIS == false)
+                        BusinessHelp.update_userTime_Server(userlist_Server);
                     ProcessLogger.Fatal("07935:System Login Start " + DateTime.Now.ToString());
                     #endregion
                     this.WindowState = FormWindowState.Maximized;
@@ -199,6 +207,7 @@ namespace SD_wordprocessor
                     return false;
                 }
                 if (userlist_Server.Count > 0 && userlist_Server[0].password.ToString().Trim() == pass.Trim() && userlist_Server[0].name.ToString().Trim() == user.Trim())
+                {
                     if (userlist_Server[0].AdminIS == "true")
                     {
                         toolStripDropDownButton1.Enabled = true;
@@ -214,6 +223,13 @@ namespace SD_wordprocessor
                     }
                     else
                     {
+                        if (userlist_Server[0].userTime != null && userlist_Server[0].userTime != "" && Convert.ToInt32(userlist_Server[0].userTime) < 1)
+                        {
+
+                            MessageBox.Show("登录失败，请确认用户名使用次数为零,请联系管理员，谢谢", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return false;
+
+                        }
                         toolStripDropDownButton1.Enabled = true;
                         toolStripDropDownButton3.Enabled = true;
                         toolStripDropDownButton2.Enabled = true;
@@ -221,8 +237,12 @@ namespace SD_wordprocessor
                         修改登录信息ToolStripMenuItem.Enabled = true;
                         logis++;
                         // return false;
+                        if (userlist_Server[0].userTime != null && userlist_Server[0].userTime != "")
+                            shengyuLogintime = Convert.ToInt32(userlist_Server[0].userTime);
+
                     }
 
+                }
                 if (logis == 0)
                 {
                     MessageBox.Show("登录失败，请确认用户名和密码或联系系统管理员，谢谢", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);

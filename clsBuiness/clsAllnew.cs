@@ -86,7 +86,10 @@ namespace clsBuiness
                 if (reader.GetValue(6) != null && Convert.ToString(reader.GetValue(6)) != "")
                     item.jigoudaima = reader.GetString(6);
                 if (reader.GetValue(7) != null && Convert.ToString(reader.GetValue(7)) != "")
-                    item.AdminIS = reader.GetString(7);
+                    item.userTime = reader.GetString(7);
+                if (reader.GetValue(8) != null && Convert.ToString(reader.GetValue(8)) != "")
+                    item.AdminIS = reader.GetString(8);
+
 
                 ClaimReport_Server.Add(item);
 
@@ -104,12 +107,20 @@ namespace clsBuiness
             return;
 
         }
+        public void update_userTime_Server(List<clsuserinfo> AddMAPResult)
+        {
+            string sql = "update _User set userTime ='" + AddMAPResult[0].userTime.Trim() + "' where name ='" + AddMAPResult[0].name + "'";
 
+            int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
+
+            return;
+
+        }
 
         public void createUser_Server(List<clsuserinfo> AddMAPResult)
         {
             //string sql = "insert into _User(name,password,Createdate,Btype,denglushijian,jigoudaima,AdminIS) values ('" + AddMAPResult[0].name + "','" + AddMAPResult[0].password + "','" + AddMAPResult[0].Createdate + "','" + AddMAPResult[0].Btype + "','" + AddMAPResult[0].denglushijian + "','" + AddMAPResult[0].jigoudaima + "','" + AddMAPResult[0].AdminIS + "')";
-            string sql = "INSERT INTO _User ( name, password,Createdate,Btype,denglushijian,jigoudaima,AdminIS ) " +
+            string sql = "INSERT INTO _User ( name, password,Createdate,Btype,denglushijian,jigoudaima,userTime,AdminIS ) " +
 
                       "VALUES (\"" + AddMAPResult[0].name + "\"" +
 
@@ -118,6 +129,7 @@ namespace clsBuiness
                                        ",\"" + AddMAPResult[0].Btype + "\"" +
                                             ",\"" + AddMAPResult[0].denglushijian + "\"" +
                                                  ",\"" + AddMAPResult[0].jigoudaima + "\"" +
+                                                     ",\"" + AddMAPResult[0].userTime + "\"" +
                              ",\"" + AddMAPResult[0].AdminIS + "\")";
 
             int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
@@ -164,8 +176,11 @@ namespace clsBuiness
                     item.denglushijian = reader.GetString(5);
                 if (reader.GetValue(6) != null && Convert.ToString(reader.GetValue(6)) != "")
                     item.jigoudaima = reader.GetString(6);
+
                 if (reader.GetValue(7) != null && Convert.ToString(reader.GetValue(7)) != "")
-                    item.AdminIS = reader.GetString(7);
+                    item.userTime = reader.GetString(7);
+                if (reader.GetValue(8) != null && Convert.ToString(reader.GetValue(8)) != "")
+                    item.AdminIS = reader.GetString(8);
 
                 ClaimReport_Server.Add(item);
 
