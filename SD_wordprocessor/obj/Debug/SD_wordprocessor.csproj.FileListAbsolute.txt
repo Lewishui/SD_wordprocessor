@@ -25,3 +25,6 @@ F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\GZ_DQCleaningCompany.frmMessageShow.resources
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmUserManger.resources
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmViewUser.resources
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe.config
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.exe
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.pdb
