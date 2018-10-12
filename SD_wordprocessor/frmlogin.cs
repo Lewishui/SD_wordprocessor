@@ -26,7 +26,8 @@ namespace SD_wordprocessor
         int logis = 0;
         bool is_AdminIS;
         int shengyuLogintime;
-
+        private frmInputCenter frmInputCenter;
+     
         public frmlogin()
         {
             InitializeComponent();
@@ -315,6 +316,28 @@ namespace SD_wordprocessor
         private void eToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void 库录入ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmInputCenter == null)
+            {
+                frmInputCenter = new frmInputCenter();
+                frmInputCenter.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
+            }
+            if (frmInputCenter == null)
+            {
+                frmInputCenter = new frmInputCenter();
+            }
+            frmInputCenter.Show(this.dockPanel2);
+
+        }
+        void FrmOMS_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (sender is frmInputCenter)
+            {
+                frmInputCenter = null;
+            }
         }
 
     }

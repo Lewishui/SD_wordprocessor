@@ -207,8 +207,47 @@ namespace clsBuiness
             return;
 
         }
-    
-  
-        
+
+
+        public void createWordKU_Server(List<clsword_info> AddMAPResult)
+        {
+            string sql = "INSERT INTO Word_ku ( zi, zhengtidaima,bushou1,bushou2,bushou3,bushou4,bushou5,bushou6,bushou7,bushou8,bushou9,Input_Date,ku_id,Message,bushou1daima,bushou2daima,bushou3daima,bushou4daima,bushou5daima,bushou6daima,bushou7daima,bushou8daima,bushou9daima ) " +
+
+                      "VALUES (\"" + AddMAPResult[0].zi + "\"" +
+
+                             ",\"" + AddMAPResult[0].zhengtidaima + "\"" +
+                                  ",\"" + AddMAPResult[0].bushou1 + "\"" +
+                                       ",\"" + AddMAPResult[0].bushou2 + "\"" +
+                                            ",\"" + AddMAPResult[0].bushou3 + "\"" +
+                                                 ",\"" + AddMAPResult[0].bushou4 + "\"" +
+                                                     ",\"" + AddMAPResult[0].bushou5 + "\"" +
+                                                            ",\"" + AddMAPResult[0].bushou6 + "\"" +
+                                                                   ",\"" + AddMAPResult[0].bushou7 + "\"" +
+                                                                          ",\"" + AddMAPResult[0].bushou8 + "\"" +
+                            ",\"" + AddMAPResult[0].bushou9 + "\"" +
+                         ",\"" + AddMAPResult[0].Input_Date + "\"" +
+                            ",\"" + AddMAPResult[0].ku_id + "\"" +
+                          ",\"" + AddMAPResult[0].Message + "\"" +
+                           ",\"" + AddMAPResult[0].bushou1daima + "\"" +
+                            ",\"" + AddMAPResult[0].bushou2daima + "\"" +
+                         ",\"" + AddMAPResult[0].bushou3daima + "\"" +
+                        ",\"" + AddMAPResult[0].bushou4daima + "\"" +
+                      ",\"" + AddMAPResult[0].bushou5daima + "\"" +
+                         ",\"" + AddMAPResult[0].bushou6daima + "\"" +
+                          ",\"" + AddMAPResult[0].bushou7daima + "\"" +
+                     ",\"" + AddMAPResult[0].bushou8daima + "\"" +
+
+
+                             ",\"" + AddMAPResult[0].bushou9daima + "\")";
+
+            int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
+
+            return;
+
+
+
+        }
+
+
     }
 }
