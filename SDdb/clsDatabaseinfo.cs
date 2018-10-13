@@ -28,7 +28,7 @@ namespace SDdb
     }
     public class clsword_info
     {
-        public string Order_id { get; set; }
+        public int Order_id { get; set; }
         public string zi { get; set; }
         public string zhengtidaima { get; set; }
         public string bushou1 { get; set; }

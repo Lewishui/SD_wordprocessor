@@ -50,6 +50,7 @@
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.pBBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.修改登录信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.库录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.导入彩票数据ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.查询信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +63,6 @@
             this.关于系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.重置密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.库录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -185,6 +185,13 @@
             this.修改登录信息ToolStripMenuItem.Text = "修改登录信息";
             this.修改登录信息ToolStripMenuItem.Click += new System.EventHandler(this.修改登录信息ToolStripMenuItem_Click);
             // 
+            // 库录入ToolStripMenuItem
+            // 
+            this.库录入ToolStripMenuItem.Name = "库录入ToolStripMenuItem";
+            this.库录入ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
+            this.库录入ToolStripMenuItem.Text = "库录入";
+            this.库录入ToolStripMenuItem.Click += new System.EventHandler(this.库录入ToolStripMenuItem_Click);
+            // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -202,12 +209,14 @@
             this.导入彩票数据ToolStripMenuItem.Name = "导入彩票数据ToolStripMenuItem";
             this.导入彩票数据ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.导入彩票数据ToolStripMenuItem.Text = "考试模式";
+            this.导入彩票数据ToolStripMenuItem.Click += new System.EventHandler(this.导入彩票数据ToolStripMenuItem_Click);
             // 
             // 查询信息ToolStripMenuItem
             // 
             this.查询信息ToolStripMenuItem.Name = "查询信息ToolStripMenuItem";
             this.查询信息ToolStripMenuItem.Size = new System.Drawing.Size(152, 26);
             this.查询信息ToolStripMenuItem.Text = "抽查模式";
+            this.查询信息ToolStripMenuItem.Click += new System.EventHandler(this.查询信息ToolStripMenuItem_Click);
             // 
             // tsbLogin
             // 
@@ -276,13 +285,6 @@
             this.重置密码ToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.重置密码ToolStripMenuItem.Text = "重置管理员密码";
             this.重置密码ToolStripMenuItem.Click += new System.EventHandler(this.重置密码ToolStripMenuItem_Click);
-            // 
-            // 库录入ToolStripMenuItem
-            // 
-            this.库录入ToolStripMenuItem.Name = "库录入ToolStripMenuItem";
-            this.库录入ToolStripMenuItem.Size = new System.Drawing.Size(176, 26);
-            this.库录入ToolStripMenuItem.Text = "库录入";
-            this.库录入ToolStripMenuItem.Click += new System.EventHandler(this.库录入ToolStripMenuItem_Click);
             // 
             // frmlogin
             // 

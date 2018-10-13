@@ -24,3 +24,4 @@ D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\System.Data.
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.csprojResolveAssemblyReference.cache
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.dll
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.pdb
+D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\ICSharpCode.SharpZipLib.dll

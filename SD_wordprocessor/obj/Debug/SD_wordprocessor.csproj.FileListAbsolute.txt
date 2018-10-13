@@ -55,3 +55,12 @@ D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wor
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmViewUser.resources
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.Properties.Resources.resources
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.csproj.GenerateResource.Cache
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmChouchamoshi.resources
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.dll
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OOXML.dll
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXml4Net.dll
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.xml
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmKaoshimoshi.resources
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmCheckKu.resources

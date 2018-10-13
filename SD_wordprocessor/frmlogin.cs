@@ -27,7 +27,11 @@ namespace SD_wordprocessor
         bool is_AdminIS;
         int shengyuLogintime;
         private frmInputCenter frmInputCenter;
-     
+
+        private frmChouchamoshi frmChouchamoshi;
+        private frmKaoshimoshi frmKaoshimoshi;
+
+
         public frmlogin()
         {
             InitializeComponent();
@@ -338,6 +342,48 @@ namespace SD_wordprocessor
             {
                 frmInputCenter = null;
             }
+            if (sender is frmChouchamoshi)
+            {
+                frmChouchamoshi = null;
+            }
+            if (sender is frmKaoshimoshi)
+            {
+                frmKaoshimoshi = null;
+            }
+            
+        }
+
+        private void 查询信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmChouchamoshi == null)
+            {
+                frmChouchamoshi = new frmChouchamoshi();
+                frmChouchamoshi.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
+            }
+            if (frmChouchamoshi == null)
+            {
+                frmChouchamoshi = new frmChouchamoshi();
+            }
+            frmChouchamoshi.Show(this.dockPanel2);
+        }
+
+        private void 导入彩票数据ToolStripMenuItem_Click(object sender, EventArgs e)
+        {        
+
+            if (frmKaoshimoshi == null)
+            {
+                frmKaoshimoshi = new frmKaoshimoshi();
+                frmKaoshimoshi.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
+            }
+            if (frmKaoshimoshi == null)
+            {
+                frmKaoshimoshi = new frmKaoshimoshi();
+            }
+            frmKaoshimoshi.Show(this.dockPanel2);
+
+
+
+
         }
 
     }
