@@ -97,6 +97,11 @@ namespace SD_wordprocessor
 
             string dir = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\" + strFileName + ".docx";
 
+
+
+        
+
+
             createWord(dir, textBox2.Text);
 
             //   Button1_Click(this, EventArgs.Empty);

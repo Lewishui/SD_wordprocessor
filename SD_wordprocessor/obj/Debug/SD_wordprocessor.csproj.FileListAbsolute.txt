@@ -64,3 +64,7 @@ D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.x
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\ICSharpCode.SharpZipLib.dll
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmKaoshimoshi.resources
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmCheckKu.resources
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.ReportForm.resources
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.cache
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.compiled
+D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Report3.rdlc

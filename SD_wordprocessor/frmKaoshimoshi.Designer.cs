@@ -29,16 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKaoshimoshi));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKaoshimoshi));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.接收邮箱设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.发送邮箱设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.发信模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -48,7 +42,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.接收邮箱设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.发送邮箱设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.发信模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.保存打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -88,56 +89,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(1011, 37);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(75, 34);
-            this.toolStripDropDownButton1.Text = "文件（F）";
-            // 
-            // toolStripDropDownButton3
-            // 
-            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.接收邮箱设置ToolStripMenuItem,
-            this.发送邮箱设置ToolStripMenuItem});
-            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
-            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
-            this.toolStripDropDownButton3.Size = new System.Drawing.Size(76, 34);
-            this.toolStripDropDownButton3.Text = "编辑（E）";
-            // 
-            // 接收邮箱设置ToolStripMenuItem
-            // 
-            this.接收邮箱设置ToolStripMenuItem.Name = "接收邮箱设置ToolStripMenuItem";
-            this.接收邮箱设置ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.接收邮箱设置ToolStripMenuItem.Text = "接收邮箱设置";
-            // 
-            // 发送邮箱设置ToolStripMenuItem
-            // 
-            this.发送邮箱设置ToolStripMenuItem.Name = "发送邮箱设置ToolStripMenuItem";
-            this.发送邮箱设置ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.发送邮箱设置ToolStripMenuItem.Text = "发送邮箱设置";
-            // 
-            // toolStripDropDownButton2
-            // 
-            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.发信模板ToolStripMenuItem});
-            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
-            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(76, 34);
-            this.toolStripDropDownButton2.Text = "工具（T）";
-            // 
-            // 发信模板ToolStripMenuItem
-            // 
-            this.发信模板ToolStripMenuItem.Name = "发信模板ToolStripMenuItem";
-            this.发信模板ToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.发信模板ToolStripMenuItem.Text = "下载word";
             // 
             // tableLayoutPanel2
             // 
@@ -239,6 +190,65 @@
             this.dataGridView1.Size = new System.Drawing.Size(889, 403);
             this.dataGridView1.TabIndex = 3;
             // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(75, 34);
+            this.toolStripDropDownButton1.Text = "文件（F）";
+            // 
+            // toolStripDropDownButton3
+            // 
+            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.接收邮箱设置ToolStripMenuItem,
+            this.发送邮箱设置ToolStripMenuItem});
+            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(76, 34);
+            this.toolStripDropDownButton3.Text = "编辑（E）";
+            // 
+            // 接收邮箱设置ToolStripMenuItem
+            // 
+            this.接收邮箱设置ToolStripMenuItem.Name = "接收邮箱设置ToolStripMenuItem";
+            this.接收邮箱设置ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.接收邮箱设置ToolStripMenuItem.Text = "接收邮箱设置";
+            // 
+            // 发送邮箱设置ToolStripMenuItem
+            // 
+            this.发送邮箱设置ToolStripMenuItem.Name = "发送邮箱设置ToolStripMenuItem";
+            this.发送邮箱设置ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.发送邮箱设置ToolStripMenuItem.Text = "发送邮箱设置";
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.发信模板ToolStripMenuItem,
+            this.保存打印ToolStripMenuItem});
+            this.toolStripDropDownButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton2.Image")));
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(76, 34);
+            this.toolStripDropDownButton2.Text = "工具（T）";
+            // 
+            // 发信模板ToolStripMenuItem
+            // 
+            this.发信模板ToolStripMenuItem.Name = "发信模板ToolStripMenuItem";
+            this.发信模板ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.发信模板ToolStripMenuItem.Text = "下载word";
+            this.发信模板ToolStripMenuItem.Click += new System.EventHandler(this.发信模板ToolStripMenuItem_Click);
+            // 
+            // 保存打印ToolStripMenuItem
+            // 
+            this.保存打印ToolStripMenuItem.Name = "保存打印ToolStripMenuItem";
+            this.保存打印ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.保存打印ToolStripMenuItem.Text = "保存&&打印";
+            this.保存打印ToolStripMenuItem.Click += new System.EventHandler(this.保存打印ToolStripMenuItem_Click);
+            // 
             // frmKaoshimoshi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -288,5 +298,6 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.ToolStrip toolStrip3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripMenuItem 保存打印ToolStripMenuItem;
     }
 }
