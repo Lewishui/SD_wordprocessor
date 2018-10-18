@@ -249,7 +249,7 @@ namespace clsBuiness
 
         public List<clsword_info> findWord(string findtext)
         {
-         
+
             SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
 
             dbConn.Open();
@@ -414,6 +414,95 @@ namespace clsBuiness
             MessageBox.Show("下载完成 ！", "System", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        public void createbushoudaimaServer(List<clsbushoudaima_info> AddMAPResult)
+        {
+            string sql = "INSERT INTO BuShouDaima ( shang, xia,zuo,you,zhong,shangzhongxia,zuozhongyou,nei,wai,jiegou,jiegoudaiam) " +
+
+                      "VALUES (\"" + AddMAPResult[0].shang + "\"" +
+
+                             ",\"" + AddMAPResult[0].xia + "\"" +
+                                  ",\"" + AddMAPResult[0].zuo + "\"" +
+                                       ",\"" + AddMAPResult[0].you + "\"" +
+                                            ",\"" + AddMAPResult[0].zhong + "\"" +
+                                                 ",\"" + AddMAPResult[0].shangzhongxia + "\"" +
+                                                     ",\"" + AddMAPResult[0].zuozhongyou + "\"" +
+                                                            ",\"" + AddMAPResult[0].nei + "\"" +
+       ",\"" + AddMAPResult[0].wai + "\"" +
+                                                            ",\"" + AddMAPResult[0].zuoyou_jiegou + "\"" +
+                                                               ",\"" + AddMAPResult[0].zuoyou_jiegoudaima + "\"" +
+                                                            ",\"" + AddMAPResult[0].shangxia_jiegou + "\"" +
+
+
+                             ",\"" + AddMAPResult[0].shangxia_jiegoudaima + "\")";
+
+            int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
+
+            return;
+        }
+
+        public List<clsbushoudaima_info> find_bushoudaima(string findtext)
+        {
+
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            dbConn.Open();
+            SQLiteCommand dbCmd = dbConn.CreateCommand();
+            //dbCmd.CommandText = "SELECT * FROM tuijanhaoma";
+            dbCmd.CommandText = findtext;
+
+            DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
+            List<clsbushoudaima_info> ClaimReport_Server = new List<clsbushoudaima_info>();
+
+            while (reader.Read())
+            {
+                clsbushoudaima_info item = new clsbushoudaima_info();
+
+                item.status_id = reader.GetInt32(0);
+                if (reader.GetValue(1) != null && Convert.ToString(reader.GetValue(1)) != "")
+                    item.shang = reader.GetString(1);
+                if (reader.GetValue(2) != null && Convert.ToString(reader.GetValue(2)) != "")
+                    item.xia = Convert.ToString(reader.GetString(2));
+                if (reader.GetValue(3) != null && Convert.ToString(reader.GetValue(3)) != "")
+                    item.zuo = reader.GetString(3);
+                if (reader.GetValue(4) != null && Convert.ToString(reader.GetValue(4)) != "")
+
+                    item.you = reader.GetString(4);
+                if (reader.GetValue(5) != null && Convert.ToString(reader.GetValue(5)) != "")
+
+                    item.zhong = reader.GetString(5);
+                if (reader.GetValue(6) != null && Convert.ToString(reader.GetValue(6)) != "")
+
+                    item.shangzhongxia = reader.GetString(6);
+                if (reader.GetValue(7) != null && Convert.ToString(reader.GetValue(7)) != "")
+
+                    item.zuozhongyou = reader.GetString(7);
+                if (reader.GetValue(8) != null && Convert.ToString(reader.GetValue(8)) != "")
+
+                    item.nei = reader.GetString(8);
+                if (reader.GetValue(9) != null && Convert.ToString(reader.GetValue(9)) != "")
+                    item.wai = Convert.ToString(reader.GetString(9));
+
+                if (reader.GetValue(10) != null && Convert.ToString(reader.GetValue(10)) != "")
+
+                    item.zuoyou_jiegou = reader.GetString(10);
+                if (reader.GetValue(11) != null && Convert.ToString(reader.GetValue(11)) != "")
+                    item.zuoyou_jiegoudaima = Convert.ToString(reader.GetString(11));
+
+                if (reader.GetValue(12) != null && Convert.ToString(reader.GetValue(12)) != "")
+
+                    item.shangxia_jiegou = reader.GetString(12);
+                if (reader.GetValue(13) != null && Convert.ToString(reader.GetValue(13)) != "")
+                    item.shangxia_jiegoudaima = Convert.ToString(reader.GetString(13));
+
+
+
+                ClaimReport_Server.Add(item);
+
+                //这里做数据处理....
+            }
+            return ClaimReport_Server;
+
+        }
 
 
     }

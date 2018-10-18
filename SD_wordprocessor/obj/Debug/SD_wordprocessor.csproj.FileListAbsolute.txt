@@ -47,8 +47,6 @@ D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wor
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmAboutBox.resources
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmEdidUser.resources
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmInputCenter.resources
-D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmInput_word.resources
-D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmkey_inputWrod.resources
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmlogin.resources
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\GZ_DQCleaningCompany.frmMessageShow.resources
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmUserManger.resources

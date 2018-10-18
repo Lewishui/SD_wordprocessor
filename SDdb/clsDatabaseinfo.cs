@@ -62,7 +62,25 @@ namespace SDdb
       
     
     }
+    public class clsbushoudaima_info
+    {
+        public int status_id { get; set; }      
+        public string shang { get; set; }
+        public string xia { get; set; }
+        public string zuo { get; set; }
+        public string you { get; set; }
+        public string zhong { get; set; }
+        public string shangzhongxia { get; set; }
+        public string zuozhongyou { get; set; }
+        public string nei { get; set; }
+        public string wai { get; set; }
+        public string zuoyou_jiegou { get; set; }
+        public string zuoyou_jiegoudaima { get; set; }
 
+        public string shangxia_jiegou { get; set; }
+        public string shangxia_jiegoudaima { get; set; }
+
+    }
 
 
 }

@@ -104,23 +104,11 @@
     <Compile Include="frmInputCenter.Designer.cs">
       <DependentUpon>frmInputCenter.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInput_word.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmInput_word.Designer.cs">
-      <DependentUpon>frmInput_word.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmKaoshimoshi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmKaoshimoshi.Designer.cs">
       <DependentUpon>frmKaoshimoshi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmkey_inputWrod.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmkey_inputWrod.Designer.cs">
-      <DependentUpon>frmkey_inputWrod.cs</DependentUpon>
     </Compile>
     <Compile Include="frmlogin.cs">
       <SubType>Form</SubType>
@@ -169,14 +157,8 @@
     <EmbeddedResource Include="frmInputCenter.resx">
       <DependentUpon>frmInputCenter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmInput_word.resx">
-      <DependentUpon>frmInput_word.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmKaoshimoshi.resx">
       <DependentUpon>frmKaoshimoshi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmkey_inputWrod.resx">
-      <DependentUpon>frmkey_inputWrod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmlogin.resx">
       <DependentUpon>frmlogin.cs</DependentUpon>

@@ -15,6 +15,7 @@ namespace SD_wordprocessor
     {
         List<clsword_info> userlist_Server;
         List<clswordpart_info> wordpart_Server;
+        List<clsbushoudaima_info> bushoudaima_Server;
 
         private string txname;
 
@@ -200,6 +201,73 @@ namespace SD_wordprocessor
         {
             txname = "textBox9";
             tx12();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            bushoudaima_Server = new List<clsbushoudaima_info>();
+
+            clsbushoudaima_info item = new clsbushoudaima_info();
+            item.shang = textBox25.Text.Trim();
+            item.xia = this.textBox24.Text.Trim();
+            item.zuo = this.textBox30.Text.Trim();
+            item.you = textBox27.Text.Trim();
+            item.zhong = this.textBox23.Text.Trim();
+            item.shangzhongxia = this.textBox31.Text.Trim();
+            item.zuozhongyou = this.textBox28.Text.Trim();
+            item.nei = this.textBox29.Text.Trim();
+            item.wai = this.textBox26.Text.Trim();
+            item.zuoyou_jiegou = this.textBox32.Text.Trim();
+            item.zuoyou_jiegoudaima = this.textBox33.Text.Trim();
+
+            item.shangxia_jiegou = this.textBox35.Text.Trim();
+            item.shangxia_jiegoudaima = this.textBox34.Text.Trim();
+          
+
+
+            bushoudaima_Server.Add(item);
+
+            clsAllnew BusinessHelp = new clsAllnew();
+
+            BusinessHelp.createbushoudaimaServer(bushoudaima_Server);
+            MessageBox.Show("创建成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.tabControl1.SelectedIndex == 2)
+            {
+                clsAllnew BusinessHelp = new clsAllnew();
+                string strSelect = "select * from BuShouDaima";
+
+                List<clsbushoudaima_info> ClaimReport_Server = BusinessHelp.find_bushoudaima(strSelect);
+
+                foreach (clsbushoudaima_info item in ClaimReport_Server)
+                {
+                    textBox25.Text = item.shang;
+                    this.textBox24.Text = item.xia;
+                    this.textBox30.Text = item.zuo;
+                    textBox27.Text = item.you;
+                    textBox23.Text = item.zhong;
+                    textBox31.Text = item.shangzhongxia;
+                    this.textBox28.Text = item.zuozhongyou;
+                    this.textBox29.Text = item.nei;
+                    this.textBox26.Text = item.wai;
+                    this.textBox32.Text = item.zuoyou_jiegou;
+                    this.textBox33.Text = item.zuoyou_jiegoudaima;
+
+                    this.textBox35.Text = item.shangxia_jiegou;
+                    this.textBox34.Text = item.shangxia_jiegoudaima;
+                }
+            }
         }
 
 

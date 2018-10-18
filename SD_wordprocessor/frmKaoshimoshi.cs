@@ -30,9 +30,7 @@ namespace SD_wordprocessor
             string sss = checkku();
             reportForm = new ReportForm();
         }
-
-
-
+        
         public string checkku()
         {
             checkname = "";
@@ -78,11 +76,11 @@ namespace SD_wordprocessor
             {
                 List<clsword_info> allLoglist_Server = new List<clsword_info>();
                 Loglist_Server = new List<clsword_info>();
-                strSelect = "select * from Word_ku where ku_id like'%" + "1" + "%'" + "order by RANDOM() limit 100";
+                strSelect = "select * from Word_ku where ku_id like'%" + "1" + "%'" + "order by RANDOM() limit 50";
 
                 Loglist_Server = BusinessHelp.findWord(strSelect);
 
-                strSelect = "select * from Word_ku where ku_id like'%" + "2" + "%'" + "order by RANDOM() limit 100";
+                strSelect = "select * from Word_ku where ku_id like'%" + "2" + "%'" + "order by RANDOM() limit 50";
 
                 allLoglist_Server = BusinessHelp.findWord(strSelect);
                 allLoglist_Server = allLoglist_Server.Concat(Loglist_Server).ToList();
@@ -92,9 +90,8 @@ namespace SD_wordprocessor
             }
 
             else
-            {//string strSelect = "select * from Word_ku where name='" + findtext + "'";
-
-
+            {
+                //string strSelect = "select * from Word_ku where name='" + findtext + "'";
                 Loglist_Server = new List<clsword_info>();
                 Loglist_Server = BusinessHelp.findWord(strSelect);
             }
@@ -277,8 +274,6 @@ namespace SD_wordprocessor
                 foreach (clsword_info k in Loglist_Server)
                 {
                     qtyTable.Rows.Add(qtyTable.NewRow());
-
-
                 }
 
 
