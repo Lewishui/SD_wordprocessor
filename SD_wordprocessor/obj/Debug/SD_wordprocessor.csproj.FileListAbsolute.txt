@@ -42,7 +42,6 @@ D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Micros
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\clsBuiness.pdb
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Order.Common.pdb
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SDdb.pdb
-D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System.Data.SQLite.xml
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.csprojResolveAssemblyReference.cache
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmAboutBox.resources
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmEdidUser.resources

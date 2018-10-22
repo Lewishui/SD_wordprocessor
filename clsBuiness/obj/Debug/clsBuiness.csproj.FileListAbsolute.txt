@@ -20,7 +20,6 @@ D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\SDdb.dll
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Order.Common.pdb
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\SDdb.pdb
-D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\System.Data.SQLite.xml
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.csprojResolveAssemblyReference.cache
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.dll
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.pdb
