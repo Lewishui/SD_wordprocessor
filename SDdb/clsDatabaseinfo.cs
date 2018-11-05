@@ -52,6 +52,11 @@ namespace SDdb
         public string bushou7daima { get; set; }
         public string bushou8daima { get; set; }
         public string bushou9daima { get; set; }
+        //
+       
+        public string jiegou { get; set; }
+        public string jiegoudaima { get; set; }
+      
 
 
     }

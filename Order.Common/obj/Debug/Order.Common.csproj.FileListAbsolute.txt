@@ -46,3 +46,8 @@ D:\Dev Project\word_processor\SD_wordprocessor\Order.Common\bin\Debug\Order.Comm
 D:\Dev Project\word_processor\SD_wordprocessor\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
 D:\Dev Project\word_processor\SD_wordprocessor\Order.Common\obj\Debug\Order.Common.dll
 D:\Dev Project\word_processor\SD_wordprocessor\Order.Common\obj\Debug\Order.Common.pdb
+D:\Devlop\word_processor\SD_wordprocessor\Order.Common\bin\Debug\Order.Common.dll
+D:\Devlop\word_processor\SD_wordprocessor\Order.Common\bin\Debug\Order.Common.pdb
+D:\Devlop\word_processor\SD_wordprocessor\Order.Common\obj\Debug\Order.Common.csprojResolveAssemblyReference.cache
+D:\Devlop\word_processor\SD_wordprocessor\Order.Common\obj\Debug\Order.Common.dll
+D:\Devlop\word_processor\SD_wordprocessor\Order.Common\obj\Debug\Order.Common.pdb

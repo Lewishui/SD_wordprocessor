@@ -65,3 +65,43 @@ D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wor
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.cache
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.compiled
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Report3.rdlc
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.csprojResolveAssemblyReference.cache
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmAboutBox.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmCheckKu.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmChouchamoshi.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmEdidUser.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmInputCenter.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmKaoshimoshi.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmlogin.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\GZ_DQCleaningCompany.frmMessageShow.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmUserManger.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmViewUser.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.Properties.Resources.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.ReportForm.resources
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.csproj.GenerateResource.Cache
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.cache
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.compiled
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.exe
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.pdb
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe.config
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Report3.rdlc
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.pdb
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\clsBuiness.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\IrisSkin2.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\log4net.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OOXML.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXml4Net.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Order.Common.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SDdb.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\MySql.Data.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System.Data.SQLite.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\clsBuiness.pdb
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Order.Common.pdb
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SDdb.pdb
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.xml

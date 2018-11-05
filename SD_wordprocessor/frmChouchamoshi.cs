@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,16 @@ namespace SD_wordprocessor
 
         string txfind;
         List<clsword_info> Orderinfolist_Server;
+        private PictureBox pictureBox1;
+
+        int Fwidth;
+        int Fheight;
+        public string FPath;
+        FontStyle Fstyle = FontStyle.Regular;
+        float Fsize = 16;
+        Color Fcolor = System.Drawing.Color.Black;
+        FontFamily a = FontFamily.GenericMonospace;
+
 
         public frmChouchamoshi()
         {
@@ -32,7 +43,16 @@ namespace SD_wordprocessor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.textBox2.Text = "";
+            addtxt();
+
+            string line = "ADDR=1234;NAME=ZHANG;PHONE=6789";
+
+            Regex reg = new Regex("NAME=(.+);");
+
+            string modified = reg.Replace(line, "NAME=WANG;");
+
+
+            //this.textBox2.Text = "";
             txfind = this.textBox1.Text;
             string[] fileText = System.Text.RegularExpressions.Regex.Split(txfind, " ");
 
@@ -80,7 +100,10 @@ namespace SD_wordprocessor
                 Orderinfolist_Server = new List<clsword_info>();
                 Orderinfolist_Server = BusinessHelp.findWord(strSelect);
                 if (Orderinfolist_Server.Count > 0)
-                    this.textBox2.Text += Orderinfolist_Server[0].zi;
+                {
+                    //this.textBox2.Text += Orderinfolist_Server[0].zi; 
+
+                }
             }
 
 
@@ -88,8 +111,8 @@ namespace SD_wordprocessor
 
         private void 发信模板ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "")
-                return;
+            //if (textBox2.Text == "")
+            //    return;
 
             clsAllnew BusinessHelp = new clsAllnew();
             //   BusinessHelp.downcsv(dataGridView1);
@@ -99,10 +122,10 @@ namespace SD_wordprocessor
 
 
 
-        
 
 
-            createWord(dir, textBox2.Text);
+
+            createWord(dir, "textBox2.Text");
 
             //   Button1_Click(this, EventArgs.Empty);
 
@@ -398,6 +421,115 @@ namespace SD_wordprocessor
         //}
 
         #endregion
+
+        private void addtxt()
+        {
+
+            #region 转移汉字
+            string strr = "女又";
+            byte[] buffer1 = Encoding.Default.GetBytes(strr);
+            string strr1 = Encoding.GetEncoding("GBK").GetString(buffer1);
+            byte[] buffer11 = Encoding.GetEncoding("GBK").GetBytes(strr);
+
+            string gb = Encoding.GetEncoding("GB2312").GetString(buffer1);
+            //如
+            string a = "如";
+            string b = "女";
+            string c = "籹";
+
+
+            buffer1 = Encoding.GetEncoding("GBK").GetBytes(a); //200 231
+            byte[] buffer2 = Encoding.GetEncoding("GBK").GetBytes(b); //197 174
+
+            buffer1 = Encoding.Unicode.GetBytes(a);
+            buffer2 = Encoding.Unicode.GetBytes(c);
+
+
+            if (a.Contains("女"))
+            {
+
+            }
+            #endregion
+            string fullname = AppDomain.CurrentDomain.BaseDirectory + "System\\16.png";
+            pictureBox1 = new PictureBox();
+
+            pictureBox1.Image = Image.FromFile(fullname);
+
+            string FPath = fullname;
+            Image ig = pictureBox1.Image;
+
+
+            clsAllnew BusinessHelp = new clsAllnew();
+            addtxt(pictureBox1.Image, "文口", fullname);
+
+            //  pictureBox1.Image =  pictureBox1;
+
+
+            saveFileDialog1.Filter = "BMP|*.bmp|JPEG|*.jpeg|GIF|*.gif|PNG|*.png";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string picPath = saveFileDialog1.FileName;
+                string picType = picPath.Substring(picPath.LastIndexOf(".") + 1, (picPath.Length - picPath.LastIndexOf(".") - 1));
+                switch (picType)
+                {
+                    case "bmp":
+                        Bitmap bt = new Bitmap(pictureBox1.Image);
+                        Bitmap mybmp = new Bitmap(bt, ig.Width, ig.Height);
+                        mybmp.Save(picPath, ImageFormat.Bmp); break;
+                    case "jpeg":
+                        Bitmap bt1 = new Bitmap(pictureBox1.Image);
+                        Bitmap mybmp1 = new Bitmap(bt1, ig.Width, ig.Height);
+                        mybmp1.Save(picPath, ImageFormat.Jpeg); break;
+                    case "gif":
+                        Bitmap bt2 = new Bitmap(pictureBox1.Image);
+                        Bitmap mybmp2 = new Bitmap(bt2, ig.Width, ig.Height);
+                        mybmp2.Save(picPath, ImageFormat.Gif); break;
+                    case "png":
+                        Bitmap bt3 = new Bitmap(pictureBox1.Image);
+                        Bitmap mybmp3 = new Bitmap(bt3, ig.Width, ig.Height);
+                        mybmp3.Save(picPath, ImageFormat.Png); break;
+                }
+            }
+
+        }
+        #region 水印
+        public void addtxt(Image ig, string txtChar, string FPath1)
+        {
+            {
+                FPath = FPath1;
+
+                pictureBox1 = new PictureBox();
+
+                pictureBox1.Image = ig;
+                if (txtChar.Trim() != "")
+                {
+
+                    int x2 = (int)(ig.Width - Fwidth) / 2;
+                    int y2 = (int)(ig.Height - Fheight) / 2;
+                    makeWatermark(x2, y2, txtChar.Trim());
+
+                }
+            }
+
+        }
+
+        public void makeWatermark(int x, int y, string txt)
+        {
+            System.Drawing.Image image = Image.FromFile(FPath);
+            System.Drawing.Graphics e = System.Drawing.Graphics.FromImage(image);
+            System.Drawing.Font f = new System.Drawing.Font(a, Fsize, Fstyle);
+            System.Drawing.Brush b = new System.Drawing.SolidBrush(Fcolor);
+            e.DrawString(txt, f, b, x, y);
+            SizeF XMaxSize = e.MeasureString(txt, f);
+
+            Fwidth = (int)XMaxSize.Width;
+            Fheight = (int)XMaxSize.Height;
+
+            e.Dispose();
+            pictureBox1.Image = image;
+        }
+        #endregion
+
 
     }
 }

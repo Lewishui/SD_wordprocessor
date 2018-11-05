@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Common;
 using System.Data.SQLite;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,15 @@ namespace clsBuiness
 
         public ToolStripProgressBar pbStatus { get; set; }
         public ToolStripStatusLabel tsStatusLabel1 { get; set; }
+        public  PictureBox pictureBox1;
+        int Fwidth;
+        int Fheight;
+        public string FPath;
+        FontStyle Fstyle = FontStyle.Regular;
+        float Fsize = 18;
+        Color Fcolor = System.Drawing.Color.Yellow;
+        FontFamily a = FontFamily.GenericMonospace;
+
 
         public clsAllnew()
         {
@@ -213,7 +223,7 @@ namespace clsBuiness
 
         public void createWordKU_Server(List<clsword_info> AddMAPResult)
         {
-            string sql = "INSERT INTO Word_ku ( zi, zhengtidaima,bushou1,bushou2,bushou3,bushou4,bushou5,bushou6,bushou7,bushou8,bushou9,Input_Date,ku_id,Message,bushou1daima,bushou2daima,bushou3daima,bushou4daima,bushou5daima,bushou6daima,bushou7daima,bushou8daima,bushou9daima ) " +
+            string sql = "INSERT INTO Word_ku ( zi, zhengtidaima,bushou1,bushou2,bushou3,bushou4,bushou5,bushou6,bushou7,bushou8,bushou9,Input_Date,ku_id,Message,bushou1daima,bushou2daima,bushou3daima,bushou4daima,bushou5daima,bushou6daima,bushou7daima,bushou8daima,bushou9daima,jiegou,jiegoudaima  ) " +
 
                       "VALUES (\"" + AddMAPResult[0].zi + "\"" +
 
@@ -238,9 +248,10 @@ namespace clsBuiness
                          ",\"" + AddMAPResult[0].bushou6daima + "\"" +
                           ",\"" + AddMAPResult[0].bushou7daima + "\"" +
                      ",\"" + AddMAPResult[0].bushou8daima + "\"" +
+                             ",\"" + AddMAPResult[0].bushou9daima + "\"" +
+                     ",\"" + AddMAPResult[0].jiegou + "\"" +
 
-
-                             ",\"" + AddMAPResult[0].bushou9daima + "\")";
+                             ",\"" + AddMAPResult[0].jiegoudaima + "\")";
 
             int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
 
@@ -330,12 +341,12 @@ namespace clsBuiness
                 if (reader.GetValue(23) != null && Convert.ToString(reader.GetValue(23)) != "")
                     item.bushou9daima = Convert.ToString(reader.GetString(23));
 
-                //if (reader.GetValue(24) != null && Convert.ToString(reader.GetValue(24)) != "")
-                //    item.bushou5daima = Convert.ToString(reader.GetString(24));
+                if (reader.GetValue(24) != null && Convert.ToString(reader.GetValue(24)) != "")
+                    item.jiegou = Convert.ToString(reader.GetString(24));
 
 
-                //if (reader.GetValue(25) != null && Convert.ToString(reader.GetValue(25)) != "")
-                //    item.bushou5daima = Convert.ToString(reader.GetString(25));
+                if (reader.GetValue(25) != null && Convert.ToString(reader.GetValue(25)) != "")
+                    item.jiegoudaima = Convert.ToString(reader.GetString(25));
 
 
                 //if (reader.GetValue(26) != null && Convert.ToString(reader.GetValue(26)) != "")
@@ -505,5 +516,7 @@ namespace clsBuiness
         }
 
 
+
+      
     }
 }

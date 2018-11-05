@@ -23,6 +23,7 @@ namespace SD_wordprocessor
         {
             InitializeComponent();
             wordpart_Server = new List<clswordpart_info>();
+            this.comboBox2.SelectedIndex = 0;
 
         }
 
@@ -91,6 +92,10 @@ namespace SD_wordprocessor
             if (maichangmingchenglist != null)
                 item.bushou9daima = maichangmingchenglist.bushou_daima.Trim();
 
+            item.jiegou = this.comboBox2.Text.Trim();
+            item.jiegoudaima = this.textBox37.Text.Trim();
+
+            item.ku_id = this.comboBox1.Text.Trim();
 
 
             item.Input_Date = DateTime.Now.ToString("yyyy/MM/dd/HH");
@@ -227,7 +232,7 @@ namespace SD_wordprocessor
 
             item.shangxia_jiegou = this.textBox35.Text.Trim();
             item.shangxia_jiegoudaima = this.textBox34.Text.Trim();
-          
+
 
 
             bushoudaima_Server.Add(item);
@@ -268,6 +273,117 @@ namespace SD_wordprocessor
                     this.textBox34.Text = item.shangxia_jiegoudaima;
                 }
             }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            showOrHide(false);
+
+            if (comboBox2.Text == "左右")
+            {
+                label1.Visible = true;
+                label6.Visible = true;
+                textBox1.Visible = true;
+                textBox6.Visible = true;
+
+
+                jiegoudaima("9991");
+
+            }
+            else if (comboBox2.Text == "上下")
+            {
+                label1.Visible = true;
+                label2.Visible = true;
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                jiegoudaima("9992");
+
+            }
+            else if (comboBox2.Text == "内外")
+            {
+                label1.Visible = true;
+                label2.Visible = true;
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                jiegoudaima("9993");
+
+            }
+            else if (comboBox2.Text == "左中右")
+            {
+                label1.Visible = true;
+                label6.Visible = true;
+                textBox1.Visible = true;
+                textBox6.Visible = true;
+                label9.Visible = true;
+                textBox9.Visible = true;
+                jiegoudaima("9994");
+
+            }
+            else if (comboBox2.Text == "上中下")
+            {
+
+
+                label1.Visible = true;
+                label2.Visible = true;
+                textBox1.Visible = true;
+                textBox2.Visible = true;
+                textBox3.Visible = true;
+                label3.Visible = true;
+
+                jiegoudaima("9995");
+
+
+            }
+            else if (comboBox2.Text == "复杂")
+            {
+                showOrHide(true);
+                jiegoudaima("9996");
+
+
+            }
+
+
+        }
+
+        private void jiegoudaima(string inpu)
+        {
+            textBox37.Text = inpu;
+        }
+
+        private void showOrHide(bool show)
+        {
+            label1.Visible = show;
+            label2.Visible = show;
+            textBox1.Visible = show;
+            textBox2.Visible = show;
+            textBox3.Visible = show;
+            label3.Visible = show;
+
+            label6.Visible = show;
+            textBox6.Visible = show;
+
+            label5.Visible = show;
+            textBox5.Visible = show;
+
+
+            label4.Visible = show;
+            textBox4.Visible = show;
+
+
+            label9.Visible = show;
+            textBox9.Visible = show;
+
+            label8.Visible = show;
+            textBox8.Visible = show;
+
+            label7.Visible = show;
+            textBox7.Visible = show;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
 
 

@@ -24,3 +24,22 @@ D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.c
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.dll
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.pdb
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.csprojResolveAssemblyReference.cache
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\clsBuiness.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\clsBuiness.pdb
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\MySql.Data.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\MySql.Data.Entity.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Order.Common.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\SDdb.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Microsoft.Office.Interop.Excel.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Order.Common.pdb
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\SDdb.pdb
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.pdb
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\MySql.Data.Entity.EF6.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.OOXML.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.OpenXml4Net.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.OpenXmlFormats.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.xml
