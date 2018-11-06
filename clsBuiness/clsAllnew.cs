@@ -1,4 +1,6 @@
 ﻿
+using ISR_System;
+using mshtml;
 using Order.Common;
 using SDdb;
 using System;
@@ -16,15 +18,27 @@ using System.Windows.Forms;
 
 namespace clsBuiness
 {
+    public enum ProcessStatus
+    {
+        初始化,
+        登录界面,
+        确认YES,
+        第一页面,
+        第二页面,
+        Filter下拉,
+        关闭页面,
+        结束页面
+
+    }
     public class clsAllnew
     {
         private string dataSource = "Data.sqlite";
         string newsth;
         public BackgroundWorker bgWorker1;
-
+        private ProcessStatus isrun = ProcessStatus.初始化;
         public ToolStripProgressBar pbStatus { get; set; }
         public ToolStripStatusLabel tsStatusLabel1 { get; set; }
-        public  PictureBox pictureBox1;
+        public PictureBox pictureBox1;
         int Fwidth;
         int Fheight;
         public string FPath;
@@ -32,6 +46,20 @@ namespace clsBuiness
         float Fsize = 18;
         Color Fcolor = System.Drawing.Color.Yellow;
         FontFamily a = FontFamily.GenericMonospace;
+        private WbBlockNewUrl MyWebBrower;
+        private Form viewForm;
+        WbBlockNewUrl myDoc = null;
+        private int login;
+        private bool isOneFinished = false;
+        bool loading;
+        bool loading_bushoujiansuo;
+        private DateTime StopTime;
+        List<clsKeyWord_web_info> ALLWord_webResult;
+
+        clsKeyWord_web_info puitem;
+        int ongoingIndex = 0;
+        int jiegoudaima = 0;
+
 
 
         public clsAllnew()
@@ -514,9 +542,668 @@ namespace clsBuiness
             return ClaimReport_Server;
 
         }
+        public static bool HasChineseTest(string text)
+        {
+            //string text = "是不是汉字，ABC,keleyi.com";
+            char[] c = text.ToCharArray();
+            bool ischina = false;
+
+            for (int i = 0; i < c.Length; i++)
+            {
+                if (c[i] >= 0x4e00 && c[i] <= 0x9fbb)
+                {
+                    ischina = true;
+
+                }
+                else
+                {
+                    //  ischina = false;
+                }
+            }
+            return ischina;
+
+        }
+
+        public List<clsKeyWord_web_info> ReadWeb_Report111()
+        {
+
+            string path1 = AppDomain.CurrentDomain.BaseDirectory + "System\\all word .txt";
+
+            string[] fileText1 = File.ReadAllLines(path1);
+            ALLWord_webResult = new List<clsKeyWord_web_info>();
+            for (int i = 2; i < fileText1.Length; i++)
+            {
+                string[] tatile1 = System.Text.RegularExpressions.Regex.Split(fileText1[i], "\t");
+                for (int iq = 1; iq < tatile1.Length; iq++)
+                {
+                    clsKeyWord_web_info item = new clsKeyWord_web_info();
+                    string name = tatile1[iq];
+                    //   name = "我";
+                    bool ishanzi = HasChineseTest(name);
+                    if (tatile1[iq] != null && tatile1[iq] != "" && tatile1[iq] != "鼻")
+                    {
+                        item.word = tatile1[iq];
+                        ALLWord_webResult.Add(item);
+                    }
+                }
+            }
+            // string ssd = ALLWord_webResult[71111].word;
+            ongoingIndex = 0;
+
+            foreach (clsKeyWord_web_info item in ALLWord_webResult)
+            {
+                isOneFinished = false;
+                jiegoudaima = 0;
+
+                puitem = new clsKeyWord_web_info();
+                puitem = item;
+                InitialWebbroswerIE2();
+                StopTime = DateTime.Now;
+                int time = 0;
+
+                while (!isOneFinished)
+                {
+                    time++;
+                    if (time > 200000)
+                        time = 0;
+
+                    System.Windows.Forms.Application.DoEvents();
+                    DateTime rq2 = DateTime.Now;  //结束时间
+                    int a = rq2.Second - StopTime.Second;
+                    TimeSpan ts = rq2 - StopTime;
+                    int timeTotal = ts.Minutes;
+
+                    if (timeTotal >= 10)
+                    {
+                        tsStatusLabel1.Text = "超出时间 正在退出....";
+                        isOneFinished = true;
+                        StopTime = DateTime.Now;
+                    }
+                }
+                if (viewForm != null)
+                {
+                    MyWebBrower = null;
+                    viewForm.Close();
+
+                }
+                jiegoudaima = 1;
+                isOneFinished = false;
+
+                //获取结构
+                puitem = new clsKeyWord_web_info();
+                puitem = item;
+                InitialWebbroswerIE2();
+                StopTime = DateTime.Now;
+                time = 0;
+
+                while (!isOneFinished)
+                {
+                    time++;
+                    if (time > 200000)
+                        time = 0;
+
+                    System.Windows.Forms.Application.DoEvents();
+                    DateTime rq2 = DateTime.Now;  //结束时间
+                    int a = rq2.Second - StopTime.Second;
+                    TimeSpan ts = rq2 - StopTime;
+                    int timeTotal = ts.Minutes;
+
+                    if (timeTotal >= 10)
+                    {
+                        tsStatusLabel1.Text = "超出时间 正在退出....";
+                        isOneFinished = true;
+                        StopTime = DateTime.Now;
+                    }
+                }
+                if (viewForm != null)
+                {
+                    MyWebBrower = null;
+                    viewForm.Close();
+
+                }
+                ongoingIndex++;
+            }
+
+            return null;
 
 
 
-      
+
+        }
+
+        public void InitialWebbroswerIE2()
+        {
+            try
+            {
+
+                MyWebBrower = new WbBlockNewUrl();
+                //不显示弹出错误继续运行框（HP方可）
+                MyWebBrower.ScriptErrorsSuppressed = true;
+                MyWebBrower.BeforeNewWindow += new EventHandler<WebBrowserExtendedNavigatingEventArgs>(MyWebBrower_BeforeNewWindow2);
+                MyWebBrower.DocumentCompleted += new WebBrowserDocumentCompletedEventHandler(AnalysisWebInfo2);
+                MyWebBrower.Dock = DockStyle.Fill;
+                MyWebBrower.IsWebBrowserContextMenuEnabled = true;
+                //显示用的窗体
+                viewForm = new Form();
+                //viewForm.Icon=
+                viewForm.ClientSize = new System.Drawing.Size(550, 600);
+                viewForm.StartPosition = FormStartPosition.CenterScreen;
+                viewForm.Controls.Clear();
+                viewForm.Controls.Add(MyWebBrower);
+                viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
+                viewForm.Show();
+                if (jiegoudaima == 0)
+                {
+                    MyWebBrower.Url = new Uri("http://tool.httpcn.com/Zi/BuShou.html");
+                    //MyWebBrower.Url = new Uri("http://www.haomeili.net/HanZi/SuoYouHanZi");
+                }
+                else
+                    MyWebBrower.Url = new Uri("https://zidian.911cha.com/zi5218.html");
+
+                tsStatusLabel1.Text = "接入 ...." + MyWebBrower.Url;
+
+            }
+            catch (Exception ex)
+            {
+
+                return;
+                throw ex;
+            }
+
+        }
+        void MyWebBrower_BeforeNewWindow2(object sender, WebBrowserExtendedNavigatingEventArgs e)
+        {
+            #region 在原有窗口导航出新页
+            //e.Cancel = true;//http://pro.wwpack-crest.hp.com/wwpak.online/regResults.aspx
+            //MyWebBrower.Navigate(e.Url);
+            #endregion
+        }
+        private void viewForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isrun != ProcessStatus.关闭页面)
+            {
+                if (MessageBox.Show("正在进行，是否中止?", "关闭", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    if (MyWebBrower != null)
+                    {
+                        if (MyWebBrower.IsBusy)
+                        {
+                            MyWebBrower.Stop();
+                        }
+                        MyWebBrower.Dispose();
+                        MyWebBrower = null;
+                    }
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+        protected void AnalysisWebInfo2(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            myDoc = sender as WbBlockNewUrl;
+            if (jiegoudaima == 0)
+            {
+                #region 读取字形结构
+                if (myDoc != null && myDoc.Url.ToString().IndexOf("http://tool.httpcn.com/Zi/BuShou.html") >= 0 && login == 0)
+                {
+                    // MyWebBrower.Navigate("http://tool.httpcn.com/Html/zi/BuShou/1_1.html");
+
+                    HtmlElement userName = null;
+                    HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("input");
+                    HtmlElement submit = null;
+
+
+                    foreach (HtmlElement item in atab)
+                    {
+                        if (item.GetAttribute("name") == "wd")
+                            userName = item;
+                        if (item.GetAttribute("Id") == "zisubmit")
+                            submit = item;
+                    }
+                    if (userName != null)
+                    {
+                        userName.SetAttribute("Value", ALLWord_webResult[ongoingIndex].word);
+
+                        submit.InvokeMember("Click");
+                        isrun = ProcessStatus.第二页面;
+                    }
+                    //login++;
+                    //loading = true;
+                    //while (loading == true)
+                    //{
+
+                    //    Application.DoEvents();
+                    //    Get_Kaijiang();
+
+                    //}
+                    login++;
+
+
+                }
+                if (myDoc.Url.ToString().IndexOf("http://tool.httpcn.com/Html/Zi/") >= 0 && isrun == ProcessStatus.第二页面)
+                {
+
+                    loading = true;
+                    while (loading == true)
+                    {
+
+                        Application.DoEvents();
+                        getPIANpang();
+
+                    }
+                    isrun = ProcessStatus.关闭页面;
+                    isOneFinished = true;
+                    login = 0;
+
+
+                }
+
+                #endregion
+            }
+            else if (jiegoudaima == 1)
+            {
+                if (myDoc != null && myDoc.Url.ToString().IndexOf("https://zidian.911cha.com/") >= 0 && login == 0)
+                {
+                    HtmlElement userName = null;
+                    HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("input");
+                    HtmlElement submit = null;
+
+                    foreach (HtmlElement item in atab)
+                    {
+                        if (item.GetAttribute("name") == "q")
+                            userName = item;
+                        if (item.GetAttribute("value") == "查询")
+                            submit = item;
+                    }
+                    if (userName != null)
+                    {
+                        userName.SetAttribute("Value", ALLWord_webResult[ongoingIndex].word);
+
+                        submit.InvokeMember("Click");
+                        isrun = ProcessStatus.第二页面;
+                        login++;
+                        return;
+
+                    }
+                }
+                else if (myDoc.Url.ToString().IndexOf("https://zidian.911cha.com/") >= 0 && isrun == ProcessStatus.第二页面)
+                {
+                    loading = true;
+                    while (loading == true)
+                    {
+
+                        Application.DoEvents();
+                        getjiegou();
+
+                    }
+                    isrun = ProcessStatus.关闭页面;
+                    isOneFinished = true;
+                    login = 0;
+
+
+                }
+
+            }
+
+
+        }
+
+        private void getPIANpang()
+        {
+            HtmlElement userNames = myDoc.Document.GetElementById("div_a1");
+            HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("div");
+            if (userNames != null)
+            {
+
+                string dd = userNames.InnerText;
+
+            }
+            HtmlElementCollection atab11 = userNames.Document.GetElementsByTagName("div");
+
+            foreach (HtmlElement item in atab)
+            {
+                if (item.OuterText != null && item.OuterText.Contains("字形结构"))
+                {
+                    int st = item.OuterText.IndexOf("[ 首尾分解查字 ]：");
+                    int end = item.OuterText.IndexOf("[ 笔顺编号 ]：");
+                    string body = item.OuterText.Substring(st, end - st);
+                    body = body.Replace("[ 首尾分解查字 ]：", "").Trim();
+                    ALLWord_webResult[ongoingIndex].pianpang = body;
+                    loading = false;
+                    break;
+
+                }
+
+            }
+        }
+        private void getjiegou()
+        {
+            //HtmlElement userNames = myDoc.Document.GetElementById("div_a1");
+
+            //HtmlElementCollection atab11 = userNames.Document.GetElementsByTagName("div");
+
+            //if (userNames != null)
+            //{
+
+            //    string dd = userNames.InnerText;
+
+            //}
+            HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("p");
+
+            foreach (HtmlElement item in atab)
+            {
+                if (item.OuterText != null && item.OuterText.Contains("结构"))
+                {
+                    int st = item.OuterText.IndexOf("结构");
+                    int end = item.OuterText.IndexOf("电码");
+                    string body = item.OuterText.Substring(st, end - st);
+                    body = body.Replace("结构", "").Trim();
+                    ALLWord_webResult[ongoingIndex].mark2 = body;
+                    loading = false;
+                    break;
+
+                }
+
+            }
+        }
+        private void Get_Kaijiang()
+        {
+            if (MyWebBrower == null)
+            {
+                loading = false;
+                return;
+
+            }
+            try
+            {
+                List<clsKeyWord_web_info> Word_webResult = new List<clsKeyWord_web_info>();
+
+                IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
+                HTMLDocument myDoc1 = doc as HTMLDocument;
+                if (myDoc1 != null)
+                {
+                    IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
+                    if (Tablelin != null)
+                        foreach (IHTMLElement items in Tablelin)
+                        {
+
+                            if (items != null && items.outerText != null && items.outerText.Contains("笔画"))
+                            {
+
+                                HTMLTable materialTable = items as HTMLTable;
+                                IHTMLElementCollection rows = materialTable.rows as IHTMLElementCollection;
+                                int KeyInfoRowIndex = 2;
+                                int KeyInfoCellCIDIndex = 1, KeyInfoCellPN = 2, KeyInfoCellLocation = 3, KeyInfoCellDataSource = 4, KeyInfoCellOrder = 5, KeyInfoCell_haomaileixing = 0, KeyInfoCell_disanyilou = 6, KeyInfoCell_dieryilou = 7, KeyInfoCell_shangciyilou = 8, KeyInfoCell_dangqianyilou = 9, KeyInfoCell_yuchujilv = 10;
+                                int KeyInfoCellCIDIndex1 = 0;
+                                for (int i = 0; i < rows.length - 1; i++)
+                                {
+                                    clsKeyWord_web_info item = new clsKeyWord_web_info();
+                                    #region MyRegion
+
+                                    HTMLTableRowClass KeyRow = rows.item(KeyInfoCellCIDIndex1, null) as HTMLTableRowClass;
+                                    HTMLTableCell shiming = KeyRow.cells.item(KeyInfoCell_haomaileixing, null) as HTMLTableCell;
+                                    item.mark1 = shiming.innerText;
+
+                                    HTMLTableCell shimingLocation = KeyRow.cells.item(KeyInfoCellCIDIndex, null) as HTMLTableCell;
+                                    item.pianpang = shimingLocation.innerText;
+
+
+                                    #endregion
+                                    string[] tatile = System.Text.RegularExpressions.Regex.Split(item.pianpang, " ");
+                                    char[] cc = item.pianpang.ToCharArray();
+                                    for (int i11 = 0; i11 < cc.Length; i11++)
+                                    {
+                                        HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("a");
+                                        string tx = cc[i11].ToString();
+                                        ///Html/zi/BuShou/1_1.html
+                                        ///http://tool.httpcn.com/Zi/BuShou.html
+                                        //http://tool.httpcn.com/Html/zi/BuShou/1_1.html
+
+
+                                        string filter_qishu = (KeyInfoCellCIDIndex1 + 1).ToString() + "_" + (i11 + 1).ToString();
+
+
+                                        MyWebBrower.Navigate("http://tool.httpcn.com/Html/zi/BuShou/" + filter_qishu.ToString() + ".html");
+                                        //  return;
+
+                                        loading_bushoujiansuo = true;
+                                        while (loading_bushoujiansuo == true)
+                                        {
+                                            System.Windows.Forms.Application.DoEvents();
+                                            //  Application.DoEvents();
+                                            Get_bushoujiansuo();
+
+                                        }
+                                    }
+
+                                    loading = false;
+
+                                    Word_webResult.Add(item);
+                                    KeyInfoCellCIDIndex1++;
+                                }
+
+                            }
+                        }
+                    isrun = ProcessStatus.关闭页面;
+                    isOneFinished = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                return;
+                throw;
+            }
+        }
+        private void Get_Kaijiangbefore()
+        {
+            if (MyWebBrower == null)
+            {
+                loading = false;
+                return;
+
+            }
+            try
+            {
+                List<clsKeyWord_web_info> Word_webResult = new List<clsKeyWord_web_info>();
+
+                IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
+                HTMLDocument myDoc1 = doc as HTMLDocument;
+                if (myDoc1 != null)
+                {
+                    IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
+                    if (Tablelin != null)
+                        foreach (IHTMLElement items in Tablelin)
+                        {
+
+                            if (items != null && items.outerText != null && items.outerText.Contains("笔画"))
+                            {
+
+                                HTMLTable materialTable = items as HTMLTable;
+                                IHTMLElementCollection rows = materialTable.rows as IHTMLElementCollection;
+                                int KeyInfoRowIndex = 2;
+                                int KeyInfoCellCIDIndex = 1, KeyInfoCellPN = 2, KeyInfoCellLocation = 3, KeyInfoCellDataSource = 4, KeyInfoCellOrder = 5, KeyInfoCell_haomaileixing = 0, KeyInfoCell_disanyilou = 6, KeyInfoCell_dieryilou = 7, KeyInfoCell_shangciyilou = 8, KeyInfoCell_dangqianyilou = 9, KeyInfoCell_yuchujilv = 10;
+                                int KeyInfoCellCIDIndex1 = 0;
+                                for (int i = 0; i < rows.length - 1; i++)
+                                {
+                                    clsKeyWord_web_info item = new clsKeyWord_web_info();
+                                    #region MyRegion
+
+                                    HTMLTableRowClass KeyRow = rows.item(KeyInfoCellCIDIndex1, null) as HTMLTableRowClass;
+                                    HTMLTableCell shiming = KeyRow.cells.item(KeyInfoCell_haomaileixing, null) as HTMLTableCell;
+                                    item.mark1 = shiming.innerText;
+
+                                    HTMLTableCell shimingLocation = KeyRow.cells.item(KeyInfoCellCIDIndex, null) as HTMLTableCell;
+                                    item.pianpang = shimingLocation.innerText;
+
+
+                                    #endregion
+                                    string[] tatile = System.Text.RegularExpressions.Regex.Split(item.pianpang, " ");
+                                    char[] cc = item.pianpang.ToCharArray();
+                                    for (int i11 = 0; i11 < cc.Length; i11++)
+                                    {
+                                        HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("a");
+                                        string tx = cc[i11].ToString();
+                                        ///Html/zi/BuShou/1_1.html
+                                        ///http://tool.httpcn.com/Zi/BuShou.html
+                                        //http://tool.httpcn.com/Html/zi/BuShou/1_1.html
+
+
+                                        string filter_qishu = (KeyInfoCellCIDIndex1 + 1).ToString() + "_" + (i11 + 1).ToString();
+
+
+                                        MyWebBrower.Navigate("http://tool.httpcn.com/Html/zi/BuShou/" + filter_qishu.ToString() + ".html");
+                                        //  return;
+
+                                        loading_bushoujiansuo = true;
+                                        while (loading_bushoujiansuo == true)
+                                        {
+                                            System.Windows.Forms.Application.DoEvents();
+                                            //  Application.DoEvents();
+                                            Get_bushoujiansuo();
+
+                                        }
+                                    }
+
+                                    loading = false;
+
+                                    Word_webResult.Add(item);
+                                    KeyInfoCellCIDIndex1++;
+                                }
+
+                            }
+                        }
+                    isrun = ProcessStatus.关闭页面;
+                    isOneFinished = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                return;
+                throw;
+            }
+        }
+
+        #region 首页 > 新华字典 > 部首检索 >
+
+
+
+
+
+        #endregion
+
+        private void Get_bushoujiansuo()
+        {
+            if (MyWebBrower == null)
+            {
+                loading_bushoujiansuo = false;
+                return;
+
+            }
+            try
+            {
+                List<clsKeyWord_web_info> Word_webResult = new List<clsKeyWord_web_info>();
+
+                IHTMLDocument2 doc = (IHTMLDocument2)MyWebBrower.Document.DomDocument;
+                HTMLDocument myDoc1 = doc as HTMLDocument;
+                if (myDoc1 != null)
+                {
+                    IHTMLElementCollection Tablelin = myDoc1.getElementsByTagName("table");
+                    if (Tablelin != null)
+                        foreach (IHTMLElement items in Tablelin)
+                        {
+
+                            if (items != null && items.outerText != null && items.outerText.Contains("拼音"))
+                            {
+
+                                HTMLTable materialTable = items as HTMLTable;
+                                IHTMLElementCollection rows = materialTable.rows as IHTMLElementCollection;
+                                int KeyInfoRowIndex = 2;
+                                int KeyInfoCellCIDIndex = 1, KeyInfoCellPN = 2, KeyInfoCellLocation = 3, KeyInfoCellDataSource = 4, KeyInfoCellOrder = 5, KeyInfoCell_haomaileixing = 0, KeyInfoCell_disanyilou = 6, KeyInfoCell_dieryilou = 7, KeyInfoCell_shangciyilou = 8, KeyInfoCell_dangqianyilou = 9, KeyInfoCell_yuchujilv = 10;
+                                int KeyInfoCellCIDIndex1 = 0;
+                                for (int i = 0; i < rows.length - 1; i++)
+                                {
+                                    clsKeyWord_web_info item = new clsKeyWord_web_info();
+                                    #region MyRegion
+
+                                    HTMLTableRowClass KeyRow = rows.item(KeyInfoCellCIDIndex1, null) as HTMLTableRowClass;
+                                    HTMLTableCell shiming = KeyRow.cells.item(KeyInfoCell_haomaileixing, null) as HTMLTableCell;
+                                    item.mark1 = shiming.innerText;
+
+                                    HTMLTableCell shimingLocation = KeyRow.cells.item(KeyInfoCellCIDIndex, null) as HTMLTableCell;
+                                    item.pianpang = shimingLocation.innerText;
+
+
+                                    #endregion
+                                    string[] tatile = System.Text.RegularExpressions.Regex.Split(item.pianpang, " ");
+                                    char[] cc = item.pianpang.ToCharArray();
+                                    for (int i11 = 0; i11 < cc.Length; i11++)
+                                    {
+                                        HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("a");
+                                        string tx = cc[i11].ToString();
+                                        ///Html/zi/BuShou/1_1.html
+                                        ///http://tool.httpcn.com/Zi/BuShou.html
+                                        //http://tool.httpcn.com/Html/zi/BuShou/1_1.html
+
+                                        string filter_qishu = (KeyInfoCellCIDIndex1 + 1).ToString() + "_" + (i11 + 1).ToString();
+
+                                        MyWebBrower.Navigate("http://tool.httpcn.com/Html/zi/BuShou/" + filter_qishu.ToString() + ".html");
+
+                                    }
+
+                                    loading_bushoujiansuo = false;
+
+                                    Word_webResult.Add(item);
+                                    KeyInfoCellCIDIndex1++;
+                                }
+
+                            }
+                        }
+                    //isrun = ProcessStatus.关闭页面;
+                    //isOneFinished = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                return;
+                throw;
+            }
+        }
+
+
+        public void createWord_web_Server(List<clsKeyWord_web_info> AddMAPResult)
+        {
+            foreach (clsKeyWord_web_info item in AddMAPResult)
+            {
+                if (item != null && item.word != null && item.word != "")
+                {
+                    deleteWord_web(item.word);
+
+                    string sql = "INSERT INTO Word_web ( word, pianpang,jiegou,mark1,mark2,mark3,mark4,mark5) " +
+
+                              "VALUES (\"" + item.word + "\"" +
+                                     ",\"" + item.pianpang + "\"" +
+                                          ",\"" + item.jiegou + "\"" +
+                                               ",\"" + item.mark1 + "\"" +
+                                                    ",\"" + item.mark2 + "\"" +
+                                                         ",\"" + item.mark3 + "\"" +
+                                                             ",\"" + item.mark4 + "\"" +
+                                     ",\"" + item.mark5 + "\")";
+
+                    int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
+                }
+            }
+            return;
+        }
+        public void deleteWord_web(string name)
+        {
+            string sql2 = "delete from Word_web where  word='" + name + "'";
+
+            int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql2, CommandType.Text, null);
+
+            return;
+
+        }
     }
 }

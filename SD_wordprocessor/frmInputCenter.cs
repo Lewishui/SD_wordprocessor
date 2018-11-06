@@ -16,6 +16,7 @@ namespace SD_wordprocessor
         List<clsword_info> userlist_Server;
         List<clswordpart_info> wordpart_Server;
         List<clsbushoudaima_info> bushoudaima_Server;
+        List<clsKeyWord_web_info> Word_webResult;
 
         private string txname;
 
@@ -383,6 +384,21 @@ namespace SD_wordprocessor
         private void button6_Click(object sender, EventArgs e)
         {
             this.Close();
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            clsAllnew BusinessHelp = new clsAllnew();
+            Word_webResult = new List<clsKeyWord_web_info>();
+            Word_webResult = BusinessHelp.ReadWeb_Report111();
+            int di = 0;
+            foreach (clsKeyWord_web_info item in Word_webResult)
+            {
+                BusinessHelp.createWord_web_Server(Word_webResult);
+                di++;
+
+            }
 
         }
 

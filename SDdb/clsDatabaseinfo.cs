@@ -87,5 +87,16 @@ namespace SDdb
 
     }
 
-
+    public class clsKeyWord_web_info
+    {
+        public int Order_id { get; set; }
+        public string word { get; set; }
+        public string pianpang { get; set; }
+        public string jiegou { get; set; }
+        public string mark1 { get; set; }
+        public string mark2{ get; set; }
+        public string mark3 { get; set; }
+        public string mark4{ get; set; }
+        public string mark5 { get; set; }
+    }
 }
