@@ -13,6 +13,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 //using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -589,12 +590,12 @@ namespace clsBuiness
             }
             // string ssd = ALLWord_webResult[71111].word;
             ongoingIndex = 0;
-
+            //㻩
             foreach (clsKeyWord_web_info item in ALLWord_webResult)
             {
                 isOneFinished = false;
                 jiegoudaima = 0;
-
+                login = 0;
                 puitem = new clsKeyWord_web_info();
                 puitem = item;
                 InitialWebbroswerIE2();
@@ -613,11 +614,11 @@ namespace clsBuiness
                     TimeSpan ts = rq2 - StopTime;
                     int timeTotal = ts.Minutes;
 
-                    if (timeTotal >= 10)
+                    if (timeTotal >=2)
                     {
-                        tsStatusLabel1.Text = "超出时间 正在退出....";
+                        //tsStatusLabel1.Text = "超出时间 正在退出....";
                         isOneFinished = true;
-                        StopTime = DateTime.Now;
+                        //StopTime = DateTime.Now;
                     }
                 }
                 if (viewForm != null)
@@ -626,9 +627,10 @@ namespace clsBuiness
                     viewForm.Close();
 
                 }
+                Thread.Sleep(1000);
                 jiegoudaima = 1;
                 isOneFinished = false;
-
+                login = 0;
                 //获取结构
                 puitem = new clsKeyWord_web_info();
                 puitem = item;
@@ -648,11 +650,11 @@ namespace clsBuiness
                     TimeSpan ts = rq2 - StopTime;
                     int timeTotal = ts.Minutes;
 
-                    if (timeTotal >= 10)
+                    if (timeTotal >= 2)
                     {
-                        tsStatusLabel1.Text = "超出时间 正在退出....";
+                        // tsStatusLabel1.Text = "超出时间 正在退出....";
                         isOneFinished = true;
-                        StopTime = DateTime.Now;
+                        //StopTime = DateTime.Now;
                     }
                 }
                 if (viewForm != null)
@@ -661,10 +663,11 @@ namespace clsBuiness
                     viewForm.Close();
 
                 }
+                login = 0;
                 ongoingIndex++;
             }
-
-            return null;
+            //2793
+            return ALLWord_webResult;
 
 
 
@@ -698,7 +701,7 @@ namespace clsBuiness
                     //MyWebBrower.Url = new Uri("http://www.haomeili.net/HanZi/SuoYouHanZi");
                 }
                 else
-                    MyWebBrower.Url = new Uri("https://zidian.911cha.com/zi5218.html");
+                    MyWebBrower.Url = new Uri("https://zidian.911cha.com/");
 
                 tsStatusLabel1.Text = "接入 ...." + MyWebBrower.Url;
 
@@ -722,22 +725,22 @@ namespace clsBuiness
         {
             if (isrun != ProcessStatus.关闭页面)
             {
-                if (MessageBox.Show("正在进行，是否中止?", "关闭", MessageBoxButtons.OKCancel) == DialogResult.OK)
-                {
-                    if (MyWebBrower != null)
-                    {
-                        if (MyWebBrower.IsBusy)
-                        {
-                            MyWebBrower.Stop();
-                        }
-                        MyWebBrower.Dispose();
-                        MyWebBrower = null;
-                    }
-                }
-                else
-                {
-                    e.Cancel = true;
-                }
+                //if (MessageBox.Show("正在进行，是否中止?", "关闭", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                //{
+                //    if (MyWebBrower != null)
+                //    {
+                //        if (MyWebBrower.IsBusy)
+                //        {
+                //            MyWebBrower.Stop();
+                //        }
+                //        MyWebBrower.Dispose();
+                //        MyWebBrower = null;
+                //    }
+                //}
+                //else
+                //{
+                //    e.Cancel = true;
+                //}
             }
         }
         protected void AnalysisWebInfo2(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -785,17 +788,17 @@ namespace clsBuiness
                 if (myDoc.Url.ToString().IndexOf("http://tool.httpcn.com/Html/Zi/") >= 0 && isrun == ProcessStatus.第二页面)
                 {
 
-                    loading = true;
-                    while (loading == true)
-                    {
+                    //loading = true;
+                    //while (loading == true)
+                    //{
 
-                        Application.DoEvents();
-                        getPIANpang();
+                    //    Application.DoEvents();
+                    getPIANpang();
 
-                    }
-                    isrun = ProcessStatus.关闭页面;
-                    isOneFinished = true;
-                    login = 0;
+                    //}
+                    //isrun = ProcessStatus.关闭页面;
+                    //isOneFinished = true;
+                    //login = 0;
 
 
                 }
@@ -804,7 +807,7 @@ namespace clsBuiness
             }
             else if (jiegoudaima == 1)
             {
-                if (myDoc != null && myDoc.Url.ToString().IndexOf("https://zidian.911cha.com/") >= 0 && login == 0)
+                if (myDoc != null && myDoc.Url.ToString().IndexOf("https://zidian.911cha.com") >= 0 && login == 0)
                 {
                     HtmlElement userName = null;
                     HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("input");
@@ -828,19 +831,19 @@ namespace clsBuiness
 
                     }
                 }
-                else if (myDoc.Url.ToString().IndexOf("https://zidian.911cha.com/") >= 0 && isrun == ProcessStatus.第二页面)
+                else if (myDoc.Url.ToString().IndexOf("https://zidian.911cha.com") >= 0 && isrun == ProcessStatus.第二页面)
                 {
-                    loading = true;
-                    while (loading == true)
-                    {
+                    //loading = true;
+                    //while (loading == true)
+                    //{
 
-                        Application.DoEvents();
-                        getjiegou();
+                    //    Application.DoEvents();
+                    getjiegou();
 
-                    }
-                    isrun = ProcessStatus.关闭页面;
-                    isOneFinished = true;
-                    login = 0;
+                    //}
+                    //isrun = ProcessStatus.关闭页面;
+                    //isOneFinished = true;
+                    //login = 0;
 
 
                 }
@@ -859,23 +862,28 @@ namespace clsBuiness
 
                 string dd = userNames.InnerText;
 
-            }
-            HtmlElementCollection atab11 = userNames.Document.GetElementsByTagName("div");
 
-            foreach (HtmlElement item in atab)
-            {
-                if (item.OuterText != null && item.OuterText.Contains("字形结构"))
+                HtmlElementCollection atab11 = userNames.Document.GetElementsByTagName("div");
+
+                foreach (HtmlElement item in atab)
                 {
-                    int st = item.OuterText.IndexOf("[ 首尾分解查字 ]：");
-                    int end = item.OuterText.IndexOf("[ 笔顺编号 ]：");
-                    string body = item.OuterText.Substring(st, end - st);
-                    body = body.Replace("[ 首尾分解查字 ]：", "").Trim();
-                    ALLWord_webResult[ongoingIndex].pianpang = body;
-                    loading = false;
-                    break;
+                    if (item.OuterText != null && item.OuterText.Contains("字形结构"))
+                    {
+                        int st = item.OuterText.IndexOf("[ 首尾分解查字 ]：");
+                        int end = item.OuterText.IndexOf("[ 笔顺编号 ]：");
+                        string body = item.OuterText.Substring(st, end - st);
+                        body = body.Replace("[ 首尾分解查字 ]：", "").Trim();
+                        ALLWord_webResult[ongoingIndex].pianpang = body;
+                        loading = false;
+
+                        isrun = ProcessStatus.关闭页面;
+                        isOneFinished = true;
+                        login = 0;
+                        break;
+
+                    }
 
                 }
-
             }
         }
         private void getjiegou()
@@ -896,13 +904,29 @@ namespace clsBuiness
             {
                 if (item.OuterText != null && item.OuterText.Contains("结构"))
                 {
-                    int st = item.OuterText.IndexOf("结构");
-                    int end = item.OuterText.IndexOf("电码");
-                    string body = item.OuterText.Substring(st, end - st);
-                    body = body.Replace("结构", "").Trim();
-                    ALLWord_webResult[ongoingIndex].mark2 = body;
-                    loading = false;
-                    break;
+                    HtmlElementCollection atab11 = item.Document.GetElementsByTagName("span");
+                    bool isjiegou = false;
+                    foreach (HtmlElement item1 in atab11)
+                    {
+                        if (item1.OuterText != null && item1.OuterText.Contains("结构"))
+                        {
+                            isjiegou = true;
+                            continue;
+                        }
+                        if (isjiegou == true)
+                        {
+                            ALLWord_webResult[ongoingIndex].mark2 = item1.OuterText;
+                            loading = false;
+                            isrun = ProcessStatus.关闭页面;
+                            isOneFinished = true;
+                            login = 0;
+                            break;
+
+                        }
+
+                    }
+                    if (isOneFinished == true)
+                        break;
 
                 }
 
@@ -1178,7 +1202,7 @@ namespace clsBuiness
             {
                 if (item != null && item.word != null && item.word != "")
                 {
-                    deleteWord_web(item.word);
+                 //   deleteWord_web(item.word);
 
                     string sql = "INSERT INTO Word_web ( word, pianpang,jiegou,mark1,mark2,mark3,mark4,mark5) " +
 
@@ -1190,7 +1214,7 @@ namespace clsBuiness
                                                          ",\"" + item.mark3 + "\"" +
                                                              ",\"" + item.mark4 + "\"" +
                                      ",\"" + item.mark5 + "\")";
-
+                    //宻
                     int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
                 }
             }

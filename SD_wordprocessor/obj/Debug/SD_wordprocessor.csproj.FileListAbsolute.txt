@@ -20,7 +20,6 @@ F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Sys
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.Office.Interop.Excel.dll
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\clsBuiness.pdb
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Order.Common.pdb
-F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System.Data.SQLite.xml
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmEdidUser.resources
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\GZ_DQCleaningCompany.frmMessageShow.resources
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmUserManger.resources
@@ -106,3 +105,18 @@ D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Order.Commo
 D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SDdb.pdb
 D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.xml
 D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Interop.SHDocVw.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Report3.rdlc
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\ICSharpCode.SharpZipLib.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OOXML.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXml4Net.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXmlFormats.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Interop.SHDocVw.dll
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.xml
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmCheckKu.resources
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmChouchamoshi.resources
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmInputCenter.resources
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.frmKaoshimoshi.resources
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.ReportForm.resources
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.cache
+F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.compiled
