@@ -1,4 +1,6 @@
 ﻿using clsBuiness;
+using GZ_DQCleaningCompany;
+using Order.Common;
 using SDdb;
 using System;
 using System.Collections.Generic;
@@ -17,6 +19,15 @@ namespace SD_wordprocessor
         List<clswordpart_info> wordpart_Server;
         List<clsbushoudaima_info> bushoudaima_Server;
         List<clsKeyWord_web_info> Word_webResult;
+        // 后台执行控件
+        private BackgroundWorker bgWorker;
+        // 消息显示窗体
+        private frmMessageShow frmMessageShow;
+        // 后台操作是否正常完成
+        private bool blnBackGroundWorkIsOK = false;
+        //后加的后台属性显
+        private bool backGroundRunResult;
+        int findtype = 0;
 
         private string txname;
 
@@ -100,7 +111,7 @@ namespace SD_wordprocessor
 
 
             item.Input_Date = DateTime.Now.ToString("yyyy/MM/dd/HH");
-            item.ku_id = "1";
+            //item.ku_id = "1";
 
             userlist_Server.Add(item);
             clsAllnew BusinessHelp = new clsAllnew();
@@ -134,9 +145,10 @@ namespace SD_wordprocessor
 
                 wordpart_Server.Add(item);
             }
-            else
+            else if (maichangmingchenglist != null && txname != null)
             {
-                maichangmingchenglist.bushou_name = txname;
+                if (txname != null)
+                    maichangmingchenglist.bushou_name = txname;
                 maichangmingchenglist.bushou_daima = textBox12.Text;
 
 
@@ -208,12 +220,98 @@ namespace SD_wordprocessor
             txname = "textBox9";
             tx12();
         }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void InitialBackGroundWorker()
         {
-
+            bgWorker = new BackgroundWorker();
+            bgWorker.WorkerReportsProgress = true;
+            bgWorker.WorkerSupportsCancellation = true;
+            bgWorker.RunWorkerCompleted +=
+                new RunWorkerCompletedEventHandler(bgWorker_RunWorkerCompleted);
+            bgWorker.ProgressChanged +=
+                new ProgressChangedEventHandler(bgWorker_ProgressChanged);
         }
 
+        private void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                blnBackGroundWorkIsOK = false;
+            }
+            else if (e.Cancelled)
+            {
+                blnBackGroundWorkIsOK = true;
+            }
+            else
+            {
+                blnBackGroundWorkIsOK = true;
+            }
+        }
+
+        private void bgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            if (frmMessageShow != null && frmMessageShow.Visible == true)
+            {
+                //设置显示的消息
+                frmMessageShow.setMessage(e.UserState.ToString());
+                //设置显示的按钮文字
+                if (e.ProgressPercentage == clsConstant.Thread_Progress_OK)
+                {
+                    frmMessageShow.setStatus(clsConstant.Dialog_Status_Enable);
+                }
+            }
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+                findtype = 1;
+            if (checkBox2.Checked == true)
+                findtype = 2;
+            if (checkBox2.Checked == true && checkBox1.Checked == true)
+                findtype = 3;
+
+            try
+            {
+                InitialBackGroundWorker();
+                bgWorker.DoWork += new DoWorkEventHandler(KEYFile);
+
+                bgWorker.RunWorkerAsync();
+                // 启动消息显示画面
+                frmMessageShow = new frmMessageShow(clsShowMessage.MSG_001,
+                                                    clsShowMessage.MSG_007,
+                                                    clsConstant.Dialog_Status_Disable);
+                frmMessageShow.ShowDialog();
+                // 数据读取成功后在画面显示
+                if (blnBackGroundWorkIsOK)
+                {
+                    this.dataGridView1.DataSource = null;
+                    this.dataGridView1.AutoGenerateColumns = true;
+                    this.dataGridView1.DataSource = userlist_Server;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        private void KEYFile(object sender, DoWorkEventArgs e)
+        {
+            userlist_Server = new List<clsword_info>();
+
+            //初始化信息
+            clsAllnew BusinessHelp = new clsAllnew();
+            string strSelect = "select * from Word_ku where ku_id like'%" + findtype.ToString() + "%'";
+            if (findtype == 3)
+                strSelect = "select * from Word_ku";
+
+            DateTime oldDate = DateTime.Now;
+
+            userlist_Server = BusinessHelp.findWord(strSelect);
+            DateTime FinishTime = DateTime.Now;  //   
+            TimeSpan s = DateTime.Now - oldDate;
+            string timei = s.Minutes.ToString() + ":" + s.Seconds.ToString();
+            string Showtime = clsShowMessage.MSG_029 + timei.ToString();
+            bgWorker.ReportProgress(clsConstant.Thread_Progress_OK, clsShowMessage.MSG_009 + "\r\n" + Showtime);
+        }
         private void button5_Click(object sender, EventArgs e)
         {
             bushoudaima_Server = new List<clsbushoudaima_info>();
@@ -351,6 +449,7 @@ namespace SD_wordprocessor
             textBox37.Text = inpu;
         }
 
+
         private void showOrHide(bool show)
         {
             label1.Visible = show;
@@ -393,12 +492,22 @@ namespace SD_wordprocessor
             Word_webResult = new List<clsKeyWord_web_info>();
             Word_webResult = BusinessHelp.ReadWeb_Report111();
             int di = 0;
-            foreach (clsKeyWord_web_info item in Word_webResult)
+           // foreach (clsKeyWord_web_info item in Word_webResult)
             {
                 BusinessHelp.createWord_web_Server(Word_webResult);
                 di++;
 
             }
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmInputCenter_Load(object sender, EventArgs e)
+        {
 
         }
 

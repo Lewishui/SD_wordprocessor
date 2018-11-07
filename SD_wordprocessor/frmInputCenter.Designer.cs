@@ -30,9 +30,9 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -97,7 +97,8 @@
             this.label30 = new System.Windows.Forms.Label();
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -120,10 +121,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.checkBox2);
+            this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.label22);
-            this.tabPage1.Controls.Add(this.textBox22);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -132,6 +134,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "查询库";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(13, 7);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 40;
+            this.button7.Text = "互联网同步";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // dataGridView1
             // 
@@ -151,17 +163,9 @@
             this.label22.Font = new System.Drawing.Font("宋体", 19F);
             this.label22.Location = new System.Drawing.Point(8, 54);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(142, 26);
+            this.label22.Size = new System.Drawing.Size(168, 26);
             this.label22.TabIndex = 38;
-            this.label22.Text = "请输入代码";
-            // 
-            // textBox22
-            // 
-            this.textBox22.Location = new System.Drawing.Point(156, 51);
-            this.textBox22.Multiline = true;
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(694, 40);
-            this.textBox22.TabIndex = 37;
+            this.label22.Text = "请输入库代码";
             // 
             // button4
             // 
@@ -277,8 +281,8 @@
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
-            "库1",
-            "库2"});
+            "1",
+            "2"});
             this.comboBox1.Location = new System.Drawing.Point(532, 107);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(91, 20);
@@ -835,15 +839,28 @@
             this.label31.TabIndex = 18;
             this.label31.Text = "上中下";
             // 
-            // button7
+            // checkBox1
             // 
-            this.button7.Location = new System.Drawing.Point(13, 7);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 40;
-            this.button7.Text = "互联网同步";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("宋体", 12F);
+            this.checkBox1.Location = new System.Drawing.Point(207, 58);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(51, 20);
+            this.checkBox1.TabIndex = 41;
+            this.checkBox1.Text = "库1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("宋体", 12F);
+            this.checkBox2.Location = new System.Drawing.Point(309, 58);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(51, 20);
+            this.checkBox2.TabIndex = 42;
+            this.checkBox2.Text = "库2";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // frmInputCenter
             // 
@@ -855,6 +872,7 @@
             this.Name = "frmInputCenter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "文字管理中心";
+            this.Load += new System.EventHandler(this.frmInputCenter_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -901,7 +919,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox22;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox23;
@@ -939,5 +956,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }

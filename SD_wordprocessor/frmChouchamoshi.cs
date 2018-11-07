@@ -1,4 +1,5 @@
 ﻿using clsBuiness;
+using DCTS.CustomComponents;
 using NPOI.OpenXmlFormats.Dml;
 using NPOI.OpenXmlFormats.Dml.WordProcessing;
 using NPOI.OpenXmlFormats.Wordprocessing;
@@ -26,7 +27,8 @@ namespace SD_wordprocessor
         string txfind;
         List<clsword_info> Orderinfolist_Server;
         private PictureBox pictureBox1;
-
+        private SortableBindingList<clsKeyWord_web_info> sortableLogList;
+      
         int Fwidth;
         int Fheight;
         public string FPath;
@@ -34,8 +36,10 @@ namespace SD_wordprocessor
         float Fsize = 16;
         Color Fcolor = System.Drawing.Color.Black;
         FontFamily a = FontFamily.GenericMonospace;
-
-
+        List<clsKeyWord_web_info> Word_web_Server;
+        DataTable qtyTable;
+        public ReportForm reportForm;
+     
         public frmChouchamoshi()
         {
             InitializeComponent();
@@ -43,7 +47,10 @@ namespace SD_wordprocessor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addtxt();
+            clsAllnew BusinessHelp = new clsAllnew();
+            Word_web_Server = new List<clsKeyWord_web_info>();
+
+            // addtxt();
 
             string line = "ADDR=1234;NAME=ZHANG;PHONE=6789";
 
@@ -54,61 +61,142 @@ namespace SD_wordprocessor
 
             //this.textBox2.Text = "";
             txfind = this.textBox1.Text;
+
             string[] fileText = System.Text.RegularExpressions.Regex.Split(txfind, " ");
 
-
+            string jiegou = "";
+            string jiegou2 = "";
+            string zi1 = "";
+            string zi2 = "";
             for (int i = 0; i < fileText.Length; i++)
             {
                 txfind = fileText[i];
-
-                string strSelect = "select * from Word_ku where zhengtidaima like'%" + txfind.ToString() + "%'";
-                #region 判断汉字或字母
-                int istrue = 0;
-
-                bool ischina = clsCommHelp.HasChineseTest(txfind.ToString());
-                if (ischina == false && txfind != "")
+                if (i == 0)
                 {
-                    if (Regex.Matches(txfind.ToString(), "[a-zA-Z]").Count > 0 && !txfind.ToString().Contains("/"))
+                    if (txfind == "7521")
+                        jiegou = "左右";
+
+                }
+                else if (i == 1)
+                {
+                    if (txfind == "9991")
+                        jiegou = "上";
+                }
+
+                else if (i == 2)
+                {
+                    string strSelect1 = "select * from Word_ku where zhengtidaima like'%" + txfind.ToString() + "%'";
+                    Orderinfolist_Server = new List<clsword_info>();
+                    Orderinfolist_Server = BusinessHelp.findWord(strSelect1);
+                    zi1 = Orderinfolist_Server[0].zi;
+                    if (jiegou == "上")
                     {
-                        istrue = 1;
+                        zi1 = Orderinfolist_Server[0].bushou1;
+                    }
+                    else if (jiegou == "下")
+                    {
+                        zi1 = Orderinfolist_Server[0].bushou4;
+
                     }
                 }
-                #endregion
-
-                //if (txfind.Length > 0 && istrue == 1)
-                //{
-                //    strSelect += " And hetongbianhao like '%" + txfind + "%'";
-                //    if (txfind == "所有")
-                //        strSelect = "select * from GZCleaning_Order";
-                //}
-
-                //if (txfind.Length > 0 && istrue == 0)
-                //{
-                //    strSelect += " And kehuxingming like '%" + txfind + "%'";
-                //    if (txfind == "所有")
-                //        strSelect = "select * from GZCleaning_Order";
-
-                //}
-
-                strSelect += " order by Input_Date asc";
-
-
-                //string strSelect = "select * from Word_ku where name='" + findtext + "'";
-
-
-                clsAllnew BusinessHelp = new clsAllnew();
-                Orderinfolist_Server = new List<clsword_info>();
-                Orderinfolist_Server = BusinessHelp.findWord(strSelect);
-                if (Orderinfolist_Server.Count > 0)
+                else if (i == 3)
                 {
-                    //this.textBox2.Text += Orderinfolist_Server[0].zi; 
+                    if (txfind == "9991")
+                        jiegou2 = "上";
+                }
+                else if (i == 4)
+                {
+                    string strSelect1 = "select * from Word_ku where zhengtidaima like'%" + txfind.ToString() + "%'";
+                    Orderinfolist_Server = new List<clsword_info>();
+                    Orderinfolist_Server = BusinessHelp.findWord(strSelect1);
+                    zi2 = Orderinfolist_Server[0].zi;
+                    if (jiegou2 == "上")
+                    {
+                        zi2 = Orderinfolist_Server[0].bushou1;
+                    }
+                    else if (jiegou2 == "下")
+                    {
+                        zi2 = Orderinfolist_Server[0].bushou4;
+
+                    }
 
                 }
+                //7521 9991 8531 9991 7452
             }
+            string WEBstrSelect = "select * from Word_web where pianpang like'%" + zi1 + zi2 + "%'";
 
+            List<clsKeyWord_web_info> one_Word_web_Server = BusinessHelp.findWord_web(WEBstrSelect);
+            Word_web_Server = Word_web_Server.Concat(one_Word_web_Server).ToList();
+
+            BindDataGridView();
 
         }
+        private void BindDataGridView()
+        {
 
+            if (Word_web_Server != null)
+            {
+                sortableLogList = new SortableBindingList<clsKeyWord_web_info>(Word_web_Server);
+                bindingSource1.DataSource = new SortableBindingList<clsKeyWord_web_info>(Word_web_Server);
+                dataGridView1.AutoGenerateColumns = true;
+                qtyTable = new DataTable();
+                for (int i = 0; i < 10; i++)
+                    qtyTable.Columns.Add("name" + (i + 1).ToString(), System.Type.GetType("System.String"));
+                qtyTable.Rows.Add(qtyTable.NewRow());
+                for (int j = 0; j < 20; j++)
+                {
+                    qtyTable.Rows.Add(qtyTable.NewRow());
+                }
+                int jk = 0;
+                {
+                    for (int j = 0; j < 100; j++)
+                    {
+                        bool isjioushu = IsOdd(j);
+                        if (isjioushu == false || j == 0)
+                        {
+
+                            //在库1也就是基础库里随机生成100组（50组文字（含标点符号和字母）转代码、50组代码转文字）代码以及文字供参与者填写给出代码的另一种代表格式
+                            for (int i = 0; i < 10; i++)
+                            {
+                                if (Word_web_Server.Count > jk)
+                                {
+                                    isjioushu = IsOdd(i);
+
+                                    if (isjioushu == false || i == 0)
+                                    {
+                                        qtyTable.Rows[j][i] = Word_web_Server[jk].word;
+                                        jk++;
+                                    }
+                                    else
+                                    {
+                                        qtyTable.Rows[j][i] = Word_web_Server[jk].word;
+                                        jk++;
+                                    }
+                                }
+                            }
+
+
+                        }
+                    }
+                }
+                this.bindingSource1.DataSource = qtyTable;
+                dataGridView1.DataSource = bindingSource1;
+                this.toolStripLabel1.Text = "条数：" + Word_web_Server.Count.ToString();
+            }
+
+        }
+        public static bool IsOdd(int n)
+        {
+            while (true)
+            {
+                switch (n)
+                {
+                    case 1: return true;
+                    case 0: return false;
+                }
+                n -= 2;
+            }
+        }
         private void 发信模板ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //if (textBox2.Text == "")
@@ -529,6 +617,25 @@ namespace SD_wordprocessor
             pictureBox1.Image = image;
         }
         #endregion
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void 打印ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool ishow = true;
+            reportForm = new ReportForm();
+            reportForm.InitializeDataSource(qtyTable, null);
+            if (ishow == true)
+                reportForm.ShowDialog();
+        }
 
 
     }

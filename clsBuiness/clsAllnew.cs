@@ -593,6 +593,7 @@ namespace clsBuiness
             //㻩 䯊
             foreach (clsKeyWord_web_info item in ALLWord_webResult)
             {
+             //   ALLWord_webResult[0].word = "机";
                 isOneFinished = false;
                 jiegoudaima = 0;
                 login = 0;
@@ -1229,5 +1230,54 @@ namespace clsBuiness
             return;
 
         }
+        public List<clsKeyWord_web_info> findWord_web(string findtext)
+        {
+
+            SQLiteConnection dbConn = new SQLiteConnection("Data Source=" + dataSource);
+
+            dbConn.Open();
+            SQLiteCommand dbCmd = dbConn.CreateCommand();
+            //dbCmd.CommandText = "SELECT * FROM tuijanhaoma";
+            dbCmd.CommandText = findtext;
+
+            DbDataReader reader = SQLiteHelper.ExecuteReader("Data Source=" + newsth, dbCmd);
+            List<clsKeyWord_web_info> ClaimReport_Server = new List<clsKeyWord_web_info>();
+
+            while (reader.Read())
+            {
+                clsKeyWord_web_info item = new clsKeyWord_web_info();
+
+                item.Order_id = reader.GetInt32(0);
+                if (reader.GetValue(1) != null && Convert.ToString(reader.GetValue(1)) != "")
+                    item.word = reader.GetString(1);
+                if (reader.GetValue(2) != null && Convert.ToString(reader.GetValue(2)) != "")
+                    item.pianpang = Convert.ToString(reader.GetString(2));
+                if (reader.GetValue(3) != null && Convert.ToString(reader.GetValue(3)) != "")
+                    item.jiegou = reader.GetString(3);
+                if (reader.GetValue(4) != null && Convert.ToString(reader.GetValue(4)) != "")
+
+                    item.mark1 = reader.GetString(4);
+                if (reader.GetValue(5) != null && Convert.ToString(reader.GetValue(5)) != "")
+
+                    item.mark2 = reader.GetString(5);
+                if (reader.GetValue(6) != null && Convert.ToString(reader.GetValue(6)) != "")
+
+                    item.mark3 = reader.GetString(6);
+                if (reader.GetValue(7) != null && Convert.ToString(reader.GetValue(7)) != "")
+
+                    item.mark4 = reader.GetString(7);
+                if (reader.GetValue(8) != null && Convert.ToString(reader.GetValue(8)) != "")
+
+                    item.mark5 = reader.GetString(8);
+               
+                ClaimReport_Server.Add(item);
+
+                //这里做数据处理....
+            }
+            return ClaimReport_Server;
+
+        }
+       
+
     }
 }
