@@ -590,7 +590,7 @@ namespace clsBuiness
             }
             // string ssd = ALLWord_webResult[71111].word;
             ongoingIndex = 0;
-            //㻩
+            //㻩 䯊
             foreach (clsKeyWord_web_info item in ALLWord_webResult)
             {
                 isOneFinished = false;
@@ -666,7 +666,7 @@ namespace clsBuiness
                 login = 0;
                 ongoingIndex++;
             }
-            //2793
+            //2793 3306
             return ALLWord_webResult;
 
 
@@ -1202,7 +1202,7 @@ namespace clsBuiness
             {
                 if (item != null && item.word != null && item.word != "")
                 {
-                 //   deleteWord_web(item.word);
+                    deleteWord_web(item.word);
 
                     string sql = "INSERT INTO Word_web ( word, pianpang,jiegou,mark1,mark2,mark3,mark4,mark5) " +
 
@@ -1214,7 +1214,7 @@ namespace clsBuiness
                                                          ",\"" + item.mark3 + "\"" +
                                                              ",\"" + item.mark4 + "\"" +
                                      ",\"" + item.mark5 + "\")";
-                    //宻
+                    //宻 亻
                     int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql, CommandType.Text, null);
                 }
             }
