@@ -36,12 +36,7 @@ D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Order.Common.pdb
 D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\SDdb.pdb
 D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.dll
 D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\obj\Debug\clsBuiness.pdb
-D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\MySql.Data.Entity.EF6.dll
-D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.dll
-D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.OOXML.dll
-D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.OpenXml4Net.dll
-D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.OpenXmlFormats.dll
-D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\NPOI.xml
 D:\Dev Project\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Interop.SHDocVw.dll
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\ICSharpCode.SharpZipLib.dll
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Interop.SHDocVw.dll
+D:\Devlop\word_processor\SD_wordprocessor\clsBuiness\bin\Debug\Interop.SHDocVw.dll

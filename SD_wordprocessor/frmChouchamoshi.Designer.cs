@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChouchamoshi));
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -52,11 +52,11 @@
             this.发送邮箱设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.发信模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.打印ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -100,8 +100,8 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -234,7 +234,8 @@
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(84, 21);
-            this.toolStripButton3.Text = "Add Row";
+            this.toolStripButton3.Text = "清空";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
             // 
             // toolStrip1
             // 
@@ -298,9 +299,16 @@
             // 发信模板ToolStripMenuItem
             // 
             this.发信模板ToolStripMenuItem.Name = "发信模板ToolStripMenuItem";
-            this.发信模板ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.发信模板ToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.发信模板ToolStripMenuItem.Text = "下载word";
             this.发信模板ToolStripMenuItem.Click += new System.EventHandler(this.发信模板ToolStripMenuItem_Click);
+            // 
+            // 打印ToolStripMenuItem
+            // 
+            this.打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
+            this.打印ToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.打印ToolStripMenuItem.Text = "打印";
+            this.打印ToolStripMenuItem.Click += new System.EventHandler(this.打印ToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -320,13 +328,6 @@
             // fontDialog1
             // 
             this.fontDialog1.Color = System.Drawing.SystemColors.ControlText;
-            // 
-            // 打印ToolStripMenuItem
-            // 
-            this.打印ToolStripMenuItem.Name = "打印ToolStripMenuItem";
-            this.打印ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.打印ToolStripMenuItem.Text = "打印";
-            this.打印ToolStripMenuItem.Click += new System.EventHandler(this.打印ToolStripMenuItem_Click);
             // 
             // frmChouchamoshi
             // 

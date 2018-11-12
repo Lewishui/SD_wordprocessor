@@ -120,3 +120,4 @@ F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\SD_wordprocessor.ReportForm.resources
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.cache
 F:\mysteap\Devpro\word_processor\SD_wordprocessor\SD_wordprocessor\obj\Debug\RdlCompile.compiled
+D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Interop.SHDocVw.dll

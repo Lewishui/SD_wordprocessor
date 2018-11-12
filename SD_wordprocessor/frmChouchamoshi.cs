@@ -28,7 +28,7 @@ namespace SD_wordprocessor
         List<clsword_info> Orderinfolist_Server;
         private PictureBox pictureBox1;
         private SortableBindingList<clsKeyWord_web_info> sortableLogList;
-      
+
         int Fwidth;
         int Fheight;
         public string FPath;
@@ -39,16 +39,17 @@ namespace SD_wordprocessor
         List<clsKeyWord_web_info> Word_web_Server;
         DataTable qtyTable;
         public ReportForm reportForm;
-     
+
         public frmChouchamoshi()
         {
             InitializeComponent();
+            Word_web_Server = new List<clsKeyWord_web_info>();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             clsAllnew BusinessHelp = new clsAllnew();
-            Word_web_Server = new List<clsKeyWord_web_info>();
+
 
             // addtxt();
 
@@ -62,72 +63,83 @@ namespace SD_wordprocessor
             //this.textBox2.Text = "";
             txfind = this.textBox1.Text;
 
-            string[] fileText = System.Text.RegularExpressions.Regex.Split(txfind, " ");
-
-            string jiegou = "";
-            string jiegou2 = "";
-            string zi1 = "";
-            string zi2 = "";
-            for (int i = 0; i < fileText.Length; i++)
+            int ddd = txfind.Replace(" ","").Length / 4;
+            int index = ddd / 5;
+            string s = "7521 9991 8531 9991 7452 ";
+            int ds = s.Length;
+            for (int iqqq = 0; iqqq < index; iqqq++)
             {
-                txfind = fileText[i];
-                if (i == 0)
-                {
-                    if (txfind == "7521")
-                        jiegou = "左右";
+                string[] fileText = System.Text.RegularExpressions.Regex.Split(txfind, " ");
 
-                }
-                else if (i == 1)
-                {
-                    if (txfind == "9991")
-                        jiegou = "上";
-                }
+                string jiegou = "";
+                string zucheng_jiegou = "";
 
-                else if (i == 2)
+                string jiegou2 = "";
+                string zi1 = "";
+                string zi2 = "";
+                for (int i = 0; i < fileText.Length; i++)
                 {
-                    string strSelect1 = "select * from Word_ku where zhengtidaima like'%" + txfind.ToString() + "%'";
-                    Orderinfolist_Server = new List<clsword_info>();
-                    Orderinfolist_Server = BusinessHelp.findWord(strSelect1);
-                    zi1 = Orderinfolist_Server[0].zi;
-                    if (jiegou == "上")
+                    txfind = fileText[i];
+                    if (i == 0)
                     {
-                        zi1 = Orderinfolist_Server[0].bushou1;
-                    }
-                    else if (jiegou == "下")
-                    {
-                        zi1 = Orderinfolist_Server[0].bushou4;
+                        if (txfind == "7521")
+                            zucheng_jiegou = "左右";
 
                     }
-                }
-                else if (i == 3)
-                {
-                    if (txfind == "9991")
-                        jiegou2 = "上";
-                }
-                else if (i == 4)
-                {
-                    string strSelect1 = "select * from Word_ku where zhengtidaima like'%" + txfind.ToString() + "%'";
-                    Orderinfolist_Server = new List<clsword_info>();
-                    Orderinfolist_Server = BusinessHelp.findWord(strSelect1);
-                    zi2 = Orderinfolist_Server[0].zi;
-                    if (jiegou2 == "上")
+                    else if (i == 1)
                     {
-                        zi2 = Orderinfolist_Server[0].bushou1;
-                    }
-                    else if (jiegou2 == "下")
-                    {
-                        zi2 = Orderinfolist_Server[0].bushou4;
-
+                        if (txfind == "9991" || txfind == "0001")
+                            jiegou = "上";
                     }
 
+                    else if (i == 2)
+                    {
+                        string strSelect1 = "select * from Word_ku where zhengtidaima like'%" + txfind.ToString() + "%'";
+                        Orderinfolist_Server = new List<clsword_info>();
+                        Orderinfolist_Server = BusinessHelp.findWord(strSelect1);
+                        zi1 = Orderinfolist_Server[0].zi;
+                        if (jiegou == "上")
+                        {
+                            zi1 = Orderinfolist_Server[0].bushou1;
+                        }
+                        else if (jiegou == "下")
+                        {
+                            zi1 = Orderinfolist_Server[0].bushou4;
+
+                        }
+                    }
+                    else if (i == 3)
+                    {
+                        if (txfind == "9991" || txfind == "0001")
+                            jiegou2 = "上";
+                    }
+                    else if (i == 4)
+                    {
+                        string strSelect1 = "select * from Word_ku where zhengtidaima like'%" + txfind.ToString() + "%'";
+                        Orderinfolist_Server = new List<clsword_info>();
+                        Orderinfolist_Server = BusinessHelp.findWord(strSelect1);
+                        zi2 = Orderinfolist_Server[0].zi;
+                        if (jiegou2 == "上")
+                        {
+                            zi2 = Orderinfolist_Server[0].bushou1;
+                        }
+                        else if (jiegou2 == "下")
+                        {
+                            zi2 = Orderinfolist_Server[0].bushou4;
+
+                        }
+
+                    }
+                    //7521 9991 8531 9991 7452
                 }
-                //7521 9991 8531 9991 7452
+                string WEBstrSelect = "select * from Word_web where pianpang like'%" + zi1 + zi2 + "%'";
+
+                List<clsKeyWord_web_info> one_Word_web_Server = BusinessHelp.findWord_web(WEBstrSelect);
+                List<clsKeyWord_web_info> Aging_CaseListResult = one_Word_web_Server.FindAll(so => so.mark2 != null && so.mark2 == zucheng_jiegou);
+
+                Word_web_Server = Word_web_Server.Concat(Aging_CaseListResult).ToList();
+
             }
-            string WEBstrSelect = "select * from Word_web where pianpang like'%" + zi1 + zi2 + "%'";
-
-            List<clsKeyWord_web_info> one_Word_web_Server = BusinessHelp.findWord_web(WEBstrSelect);
-            Word_web_Server = Word_web_Server.Concat(one_Word_web_Server).ToList();
-
             BindDataGridView();
 
         }
@@ -182,6 +194,12 @@ namespace SD_wordprocessor
                 this.bindingSource1.DataSource = qtyTable;
                 dataGridView1.DataSource = bindingSource1;
                 this.toolStripLabel1.Text = "条数：" + Word_web_Server.Count.ToString();
+            }
+            else
+            {
+                dataGridView1.DataSource = null;
+
+
             }
 
         }
@@ -635,6 +653,14 @@ namespace SD_wordprocessor
             reportForm.InitializeDataSource(qtyTable, null);
             if (ishow == true)
                 reportForm.ShowDialog();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            Word_web_Server = new List<clsKeyWord_web_info>();
+            this.textBox1.Text = "";
+
+            BindDataGridView();
         }
 
 

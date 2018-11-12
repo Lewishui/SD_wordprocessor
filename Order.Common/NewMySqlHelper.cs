@@ -349,7 +349,7 @@ namespace Order.Common
 
         public static bool DbConnectable()
         {
-            bool success = false;
+           bool success = false;
             string msg = "";
             //连接字符串拼装  
 
@@ -369,6 +369,13 @@ namespace Order.Common
             }
             catch (MySqlException exception)
             {
+                connection.Open();
+
+                if (connection.State.ToString() == "Open")
+                {
+
+                    success = true;
+                }
 
             }
             finally
