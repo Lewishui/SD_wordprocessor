@@ -590,7 +590,9 @@ namespace clsBuiness
             }
             // string ssd = ALLWord_webResult[71111].word;
             ongoingIndex = 0;
-            //㻩 䯊
+            //㻩 䯊 图 膔 鄠
+            List<clsKeyWord_web_info> Reaad_ALLWord_webResult = new List<clsKeyWord_web_info>();
+
             foreach (clsKeyWord_web_info item in ALLWord_webResult)
             {
              //   ALLWord_webResult[0].word = "机";
@@ -664,11 +666,14 @@ namespace clsBuiness
                     viewForm.Close();
 
                 }
+                Reaad_ALLWord_webResult.Add(ALLWord_webResult[ongoingIndex]);
                 login = 0;
                 ongoingIndex++;
+        
+
             }
-            //2793 3306
-            return ALLWord_webResult;
+            //2793 3306 2804 10916 3984
+            return Reaad_ALLWord_webResult;
 
 
 
@@ -872,15 +877,18 @@ namespace clsBuiness
                     {
                         int st = item.OuterText.IndexOf("[ 首尾分解查字 ]：");
                         int end = item.OuterText.IndexOf("[ 笔顺编号 ]：");
-                        string body = item.OuterText.Substring(st, end - st);
-                        body = body.Replace("[ 首尾分解查字 ]：", "").Trim();
-                        ALLWord_webResult[ongoingIndex].pianpang = body;
-                        loading = false;
+                        if (st > 0)
+                        {
+                            string body = item.OuterText.Substring(st, end - st);
+                            body = body.Replace("[ 首尾分解查字 ]：", "").Trim();
+                            ALLWord_webResult[ongoingIndex].pianpang = body;
+                            loading = false;
 
-                        isrun = ProcessStatus.关闭页面;
-                        isOneFinished = true;
-                        login = 0;
-                        break;
+                            isrun = ProcessStatus.关闭页面;
+                            isOneFinished = true;
+                            login = 0;
+                            break;
+                        }
 
                     }
 
@@ -1203,6 +1211,11 @@ namespace clsBuiness
             {
                 if (item != null && item.word != null && item.word != "")
                 {
+                    if (item.word == "膔")
+                    {
+                        MessageBox.Show("到了","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+
+                    }
                     deleteWord_web(item.word);
 
                     string sql = "INSERT INTO Word_web ( word, pianpang,jiegou,mark1,mark2,mark3,mark4,mark5) " +
