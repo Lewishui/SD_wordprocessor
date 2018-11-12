@@ -62,13 +62,27 @@ namespace SD_wordprocessor
 
             //this.textBox2.Text = "";
             txfind = this.textBox1.Text;
+           string alltxfind = this.textBox1.Text;
 
             int ddd = txfind.Replace(" ","").Length / 4;
             int index = ddd / 5;
             string s = "7521 9991 8531 9991 7452 ";
             int ds = s.Length;
+            int indexall = 0;
             for (int iqqq = 0; iqqq < index; iqqq++)
             {
+                string[] fileTextall = System.Text.RegularExpressions.Regex.Split(alltxfind, " ");
+                int weiindex=(iqqq+1)*5;
+                string aldd = "";
+                int startindex = indexall;
+                for (int inli = startindex; inli < weiindex; inli++)
+                {
+                    aldd += fileTextall[inli]+" ";
+                    indexall++;
+                }
+                txfind = aldd.Trim();
+
+
                 string[] fileText = System.Text.RegularExpressions.Regex.Split(txfind, " ");
 
                 string jiegou = "";
