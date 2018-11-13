@@ -590,14 +590,34 @@ namespace clsBuiness
             }
             // string ssd = ALLWord_webResult[71111].word;
             ongoingIndex = 0;
-            //㻩 䯊 图 膔 鄠
+            //㻩 䯊 图 膔 鄠 落 励
             List<clsKeyWord_web_info> Reaad_ALLWord_webResult = new List<clsKeyWord_web_info>();
 
             foreach (clsKeyWord_web_info item in ALLWord_webResult)
             {
-             //   ALLWord_webResult[0].word = "机";
+
+               // Thread.Sleep(2000); 
+                #region 繁体转简体
+                if (string.IsNullOrEmpty(ALLWord_webResult[ongoingIndex].word))
+                {
+                    continue;
+                }
+                else
+                {
+                    string value = ALLWord_webResult[ongoingIndex].word.Trim();
+                    string newValue = StringConvert(value, "2");
+                    if (!string.IsNullOrEmpty(newValue)&&!newValue.Contains("?"))
+                    {
+                        ALLWord_webResult[ongoingIndex].word = newValue;
+
+                    }
+                }
+                #endregion
+                //   ALLWord_webResult[0].word = "机";
                 isOneFinished = false;
-                jiegoudaima = 0;
+             //  jiegoudaima = 0;//被屏蔽的
+                jiegoudaima = 2;//查字网
+
                 login = 0;
                 puitem = new clsKeyWord_web_info();
                 puitem = item;
@@ -615,13 +635,17 @@ namespace clsBuiness
                     DateTime rq2 = DateTime.Now;  //结束时间
                     int a = rq2.Second - StopTime.Second;
                     TimeSpan ts = rq2 - StopTime;
-                    int timeTotal = ts.Minutes;
+                    int timeTotal = ts.Seconds;
 
-                    if (timeTotal >=2)
+                    if (timeTotal >= 20)
                     {
                         //tsStatusLabel1.Text = "超出时间 正在退出....";
                         isOneFinished = true;
                         //StopTime = DateTime.Now;
+                    }
+                    if (jiegoudaima == 2 && isrun == ProcessStatus.第二页面)
+                    {
+                        getPIANpang2();
                     }
                 }
                 if (viewForm != null)
@@ -651,13 +675,17 @@ namespace clsBuiness
                     DateTime rq2 = DateTime.Now;  //结束时间
                     int a = rq2.Second - StopTime.Second;
                     TimeSpan ts = rq2 - StopTime;
-                    int timeTotal = ts.Minutes;
+                    int timeTotal = ts.Seconds;
 
-                    if (timeTotal >= 2)
+                    if (timeTotal >= 20)
                     {
                         // tsStatusLabel1.Text = "超出时间 正在退出....";
                         isOneFinished = true;
                         //StopTime = DateTime.Now;
+                    }
+                    if (jiegoudaima == 1 && isrun == ProcessStatus.第二页面)
+                    {
+                        getjiegou();
                     }
                 }
                 if (viewForm != null)
@@ -669,7 +697,7 @@ namespace clsBuiness
                 Reaad_ALLWord_webResult.Add(ALLWord_webResult[ongoingIndex]);
                 login = 0;
                 ongoingIndex++;
-        
+
 
             }
             //2793 3306 2804 10916 3984
@@ -678,6 +706,22 @@ namespace clsBuiness
 
 
 
+        }
+        public string StringConvert(string x, string type)
+        {
+            String value = String.Empty;
+            switch (type)
+            {
+                case "1"://转繁体
+                    value = Microsoft.VisualBasic.Strings.StrConv(x, Microsoft.VisualBasic.VbStrConv.TraditionalChinese, 0);
+                    break;
+                case "2":
+                    value = Microsoft.VisualBasic.Strings.StrConv(x, Microsoft.VisualBasic.VbStrConv.SimplifiedChinese, 0);
+                    break;
+                default:
+                    break;
+            }
+            return value;
         }
 
         public void InitialWebbroswerIE2()
@@ -706,8 +750,11 @@ namespace clsBuiness
                     MyWebBrower.Url = new Uri("http://tool.httpcn.com/Zi/BuShou.html");
                     //MyWebBrower.Url = new Uri("http://www.haomeili.net/HanZi/SuoYouHanZi");
                 }
-                else
+                else if (jiegoudaima == 1)
                     MyWebBrower.Url = new Uri("https://zidian.911cha.com/");
+                else if (jiegoudaima == 2)
+                    MyWebBrower.Url = new Uri("http://www.chaziwang.com/bushou.html");
+
 
                 tsStatusLabel1.Text = "接入 ...." + MyWebBrower.Url;
 
@@ -811,6 +858,72 @@ namespace clsBuiness
 
                 #endregion
             }
+            if (jiegoudaima == 2)//之前网站屏蔽了
+            {
+                #region 读取字形结构
+                if (myDoc != null && myDoc.Url.ToString().IndexOf("http://www.chaziwang.com/bushou.html") >= 0 && login == 0)
+                {
+
+                    HtmlElement userName = null;
+                    HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("input");
+                    HtmlElement submit = null;
+
+
+                    foreach (HtmlElement item in atab)
+                    {
+                        if (item.GetAttribute("name") == "q")
+                            userName = item;
+                        if (item.GetAttribute("Id") == "su")
+                            submit = item;
+                    }
+                    HtmlElementCollection atab1 = myDoc.Document.GetElementsByTagName("button");
+                    foreach (HtmlElement item in atab1)
+                    {
+
+                        if (item.GetAttribute("id") == "su")
+                            submit = item;
+                    }
+
+                    if (userName != null && submit != null)
+                    {
+                        userName.SetAttribute("Value", ALLWord_webResult[ongoingIndex].word);
+
+                        submit.InvokeMember("Click");
+                        isrun = ProcessStatus.第二页面;
+                    }
+                    //login++;
+                    //loading = true;
+                    //while (loading == true)
+                    //{
+
+                    //    Application.DoEvents();
+                    //    Get_Kaijiang();
+
+                    //}
+                    login++;
+
+
+                }
+                if (myDoc.Url.ToString().IndexOf("http://www.chaziwang.com/bushou.html") >= 0 && isrun == ProcessStatus.第二页面)
+                {
+
+                    // loading = true;
+                    //  while (loading == true)
+                    {
+
+                        //   Application.DoEvents();
+                        // getPIANpang2();
+
+                    }
+                    //isrun = ProcessStatus.关闭页面;
+                    //isOneFinished = true;
+                    //login = 0;
+
+
+                }
+
+                #endregion
+            }
             else if (jiegoudaima == 1)
             {
                 if (myDoc != null && myDoc.Url.ToString().IndexOf("https://zidian.911cha.com") >= 0 && login == 0)
@@ -895,6 +1008,54 @@ namespace clsBuiness
                 }
             }
         }
+        private void getPIANpang2()
+        {
+            HtmlElementCollection atab;
+            //   HtmlElement userNames = myDoc.Document.GetElementById("wrap");
+            //try
+            //{
+            if (myDoc.IsDisposed == false)
+            {
+
+                atab = myDoc.Document.GetElementsByTagName("p");
+
+                //}
+                //catch (Exception ex)
+                //{
+                //    return;
+                //    throw;
+                //}
+                // if (userNames != null)
+                {
+
+                    //    string dd = userNames.InnerText;
+
+
+                    // HtmlElementCollection atab11 = userNames.Document.GetElementsByTagName("div");
+
+                    foreach (HtmlElement item in atab)
+                    {
+                        if (item.OuterText != null && item.OuterText.Contains("部件分解"))
+                        {
+
+                            string body = item.OuterText;
+                            body = body.Replace("部件分解：", "").Trim();
+                            ALLWord_webResult[ongoingIndex].pianpang = body;
+                            loading = false;
+
+                            isrun = ProcessStatus.关闭页面;
+                            isOneFinished = true;
+                            login = 0;
+                            break;
+
+
+                        }
+
+                    }
+                }
+            }
+        }
+
         private void getjiegou()
         {
             //HtmlElement userNames = myDoc.Document.GetElementById("div_a1");
@@ -907,38 +1068,40 @@ namespace clsBuiness
             //    string dd = userNames.InnerText;
 
             //}
-            HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("p");
-
-            foreach (HtmlElement item in atab)
+            if (myDoc.IsDisposed == false)
             {
-                if (item.OuterText != null && item.OuterText.Contains("结构"))
+                HtmlElementCollection atab = myDoc.Document.GetElementsByTagName("p");
+
+                foreach (HtmlElement item in atab)
                 {
-                    HtmlElementCollection atab11 = item.Document.GetElementsByTagName("span");
-                    bool isjiegou = false;
-                    foreach (HtmlElement item1 in atab11)
+                    if (item.OuterText != null && item.OuterText.Contains("结构"))
                     {
-                        if (item1.OuterText != null && item1.OuterText.Contains("结构"))
+                        HtmlElementCollection atab11 = item.Document.GetElementsByTagName("span");
+                        bool isjiegou = false;
+                        foreach (HtmlElement item1 in atab11)
                         {
-                            isjiegou = true;
-                            continue;
+                            if (item1.OuterText != null && item1.OuterText.Contains("结构"))
+                            {
+                                isjiegou = true;
+                                continue;
+                            }
+                            if (isjiegou == true)
+                            {
+                                ALLWord_webResult[ongoingIndex].mark2 = item1.OuterText;
+                                loading = false;
+                                isrun = ProcessStatus.关闭页面;
+                                isOneFinished = true;
+                                login = 0;
+                                break;
+
+                            }
+
                         }
-                        if (isjiegou == true)
-                        {
-                            ALLWord_webResult[ongoingIndex].mark2 = item1.OuterText;
-                            loading = false;
-                            isrun = ProcessStatus.关闭页面;
-                            isOneFinished = true;
-                            login = 0;
+                        if (isOneFinished == true)
                             break;
 
-                        }
-
                     }
-                    if (isOneFinished == true)
-                        break;
-
                 }
-
             }
         }
         private void Get_Kaijiang()
@@ -1213,7 +1376,7 @@ namespace clsBuiness
                 {
                     if (item.word == "膔")
                     {
-                        MessageBox.Show("到了","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        MessageBox.Show("到了", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     }
                     deleteWord_web(item.word);
@@ -1282,7 +1445,7 @@ namespace clsBuiness
                 if (reader.GetValue(8) != null && Convert.ToString(reader.GetValue(8)) != "")
 
                     item.mark5 = reader.GetString(8);
-               
+
                 ClaimReport_Server.Add(item);
 
                 //这里做数据处理....
@@ -1290,7 +1453,7 @@ namespace clsBuiness
             return ClaimReport_Server;
 
         }
-       
+
 
     }
 }

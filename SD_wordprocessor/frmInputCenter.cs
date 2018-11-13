@@ -495,6 +495,8 @@ namespace SD_wordprocessor
                 di++;
 
             }
+            MessageBox.Show("ok");
+
 
         }
 
