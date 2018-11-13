@@ -62,9 +62,9 @@ namespace SD_wordprocessor
 
             //this.textBox2.Text = "";
             txfind = this.textBox1.Text;
-           string alltxfind = this.textBox1.Text;
+            string alltxfind = this.textBox1.Text;
 
-            int ddd = txfind.Replace(" ","").Length / 4;
+            int ddd = txfind.Replace(" ", "").Length / 4;
             int index = ddd / 5;
             string s = "7521 9991 8531 9991 7452 ";
             int ds = s.Length;
@@ -72,12 +72,12 @@ namespace SD_wordprocessor
             for (int iqqq = 0; iqqq < index; iqqq++)
             {
                 string[] fileTextall = System.Text.RegularExpressions.Regex.Split(alltxfind, " ");
-                int weiindex=(iqqq+1)*5;
+                int weiindex = (iqqq + 1) * 5;
                 string aldd = "";
                 int startindex = indexall;
                 for (int inli = startindex; inli < weiindex; inli++)
                 {
-                    aldd += fileTextall[inli]+" ";
+                    aldd += fileTextall[inli] + " ";
                     indexall++;
                 }
                 txfind = aldd.Trim();
@@ -98,12 +98,23 @@ namespace SD_wordprocessor
                     {
                         if (txfind == "7521")
                             zucheng_jiegou = "左右";
-
+                        if (txfind == "9991")
+                            zucheng_jiegou = "左右";
+                        if (txfind == "9992")
+                            zucheng_jiegou = "上下";
+                        if (txfind == "9993")
+                            zucheng_jiegou = "内外";
+                        if (txfind == "9994")
+                            zucheng_jiegou = "左中右";
+                        if (txfind == "9995")
+                            zucheng_jiegou = "上中下";
+                        if (txfind == "9996")
+                            zucheng_jiegou = "复杂";
                     }
                     else if (i == 1)
                     {
-                        if (txfind == "9991" || txfind == "0001")
-                            jiegou = "上";
+                        jiegou = jiegouCheck(jiegou);
+
                     }
 
                     else if (i == 2)
@@ -126,6 +137,7 @@ namespace SD_wordprocessor
                     {
                         if (txfind == "9991" || txfind == "0001")
                             jiegou2 = "上";
+                        jiegou2 = jiegouCheck(jiegou2);
                     }
                     else if (i == 4)
                     {
@@ -156,6 +168,25 @@ namespace SD_wordprocessor
             }
             BindDataGridView();
 
+        }
+
+        private string jiegouCheck(string jiegou)
+        {
+            if (txfind == "9991" || txfind == "0001")
+                jiegou = "上";
+            if (txfind == "0001")
+                jiegou = "上";
+            if (txfind == "0002")
+                jiegou = "下";
+            if (txfind == "0003")
+                jiegou = "左";
+            if (txfind == "0004")
+                jiegou = "右";
+            if (txfind == "0005")
+                jiegou = "内";
+            if (txfind == "0006")
+                jiegou = "外";
+            return jiegou;
         }
         private void BindDataGridView()
         {
@@ -675,6 +706,16 @@ namespace SD_wordprocessor
             this.textBox1.Text = "";
 
             BindDataGridView();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            var form = new frmInputCenter( );
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+
+            }
         }
 
 
