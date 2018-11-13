@@ -428,7 +428,6 @@ namespace SD_wordprocessor
                 textBox2.Visible = true;
                 textBox3.Visible = true;
                 label3.Visible = true;
-
                 jiegoudaima("9995");
 
 
@@ -437,8 +436,6 @@ namespace SD_wordprocessor
             {
                 showOrHide(true);
                 jiegoudaima("9996");
-
-
             }
 
 
@@ -492,7 +489,7 @@ namespace SD_wordprocessor
             Word_webResult = new List<clsKeyWord_web_info>();
             Word_webResult = BusinessHelp.ReadWeb_Report111();
             int di = 0;
-           // foreach (clsKeyWord_web_info item in Word_webResult)
+            // foreach (clsKeyWord_web_info item in Word_webResult)
             {
                 BusinessHelp.createWord_web_Server(Word_webResult);
                 di++;

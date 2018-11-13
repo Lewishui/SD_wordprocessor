@@ -199,5 +199,10 @@ namespace SD_wordprocessor
 
         }
         #endregion
+
+        private void reportViewer1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
