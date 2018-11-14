@@ -590,7 +590,7 @@ namespace clsBuiness
             }
             // string ssd = ALLWord_webResult[71111].word;
             ongoingIndex = 0;
-            //㻩 䯊 图 膔 鄠 落 励 𠄝 𠈋 𠔒
+            //㻩 䯊 图 膔 鄠 落 励 𠄝 𠈋 𠔒 𠔞
             List<clsKeyWord_web_info> Reaad_ALLWord_webResult = new List<clsKeyWord_web_info>();
             int onindex1 = 0;
             int onindex2 = 0;
