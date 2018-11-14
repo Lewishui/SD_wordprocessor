@@ -590,8 +590,10 @@ namespace clsBuiness
             }
             // string ssd = ALLWord_webResult[71111].word;
             ongoingIndex = 0;
-            //㻩 䯊 图 膔 鄠 落 励 𠄝
+            //㻩 䯊 图 膔 鄠 落 励 𠄝 𠈋 𠔒
             List<clsKeyWord_web_info> Reaad_ALLWord_webResult = new List<clsKeyWord_web_info>();
+            int onindex1 = 0;
+            int onindex2 = 0;
 
             foreach (clsKeyWord_web_info item in ALLWord_webResult)
             {
@@ -615,9 +617,22 @@ namespace clsBuiness
                 #endregion
                 //   ALLWord_webResult[0].word = "机";
                 isOneFinished = false;
-             //  jiegoudaima = 0;//被屏蔽的
-                jiegoudaima = 2;//查字网
-
+                if (onindex1 <= 5)
+                {
+                    jiegoudaima = 0;//被屏蔽的
+                    onindex1++;
+                }
+                else if (onindex2 <= 5)
+                {
+                    jiegoudaima = 2;//查字网
+                    onindex2++;
+                }
+                else if (onindex2 > 5)
+                {
+                    onindex1 = 0;
+                    onindex2 = 0;
+                    jiegoudaima = 0;//被屏蔽的
+                }
                 login = 0;
                 puitem = new clsKeyWord_web_info();
                 puitem = item;
@@ -637,7 +652,7 @@ namespace clsBuiness
                     TimeSpan ts = rq2 - StopTime;
                     int timeTotal = ts.Seconds;
 
-                    if (timeTotal >= 20)
+                    if (timeTotal >= 8)
                     {
                         //tsStatusLabel1.Text = "超出时间 正在退出....";
                         isOneFinished = true;
