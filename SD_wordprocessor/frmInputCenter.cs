@@ -18,7 +18,7 @@ namespace SD_wordprocessor
    
     public partial class frmInputCenter : Form
     {
-        [DllImport("wininet.dll")]
+      //  [DllImport("wininet.dll")]
         List<clsword_info> userlist_Server;
         List<clswordpart_info> wordpart_Server;
         List<clsbushoudaima_info> bushoudaima_Server;
@@ -48,28 +48,28 @@ namespace SD_wordprocessor
 
             //  tabControl1.TabPages.Insert(0, tp);//显示（插入）
             
-            isnet = IsConnectionInternet();
+           // isnet = IsConnectionInternet();
         }
 
-        private extern static bool InternetGetConnectedState(int Description, int ReservedValue);
-        private bool IsConnectionInternet()
-        {
-            isnet = false;
-            if (InternetGetConnectedState(0, 0) == true)
-            {
-                MessageBox.Show("系统已连上网络");
-                isnet = true;
+        //private extern static bool InternetGetConnectedState(int Description, int ReservedValue);
+        //private bool IsConnectionInternet()
+        //{
+        //    isnet = false;
+        //    if (InternetGetConnectedState(0, 0) == true)
+        //    {
+        //        MessageBox.Show("系统已连上网络");
+        //        isnet = true;
 
-            }
-            else
-            {
-                MessageBox.Show("系统未连接网络");
-                isnet = false;
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("系统未连接网络");
+        //        isnet = false;
 
-            }
-            return isnet;
+        //    }
+        //    return isnet;
 
-        }
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
