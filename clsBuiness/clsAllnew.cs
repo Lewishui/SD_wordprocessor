@@ -590,7 +590,7 @@ namespace clsBuiness
             }
             // string ssd = ALLWord_webResult[71111].word;
             ongoingIndex = 0;
-            //㻩 䯊 图 膔 鄠 落 励 𠄝 𠈋 𠔒 𠔞
+            //㻩 䯊 图 膔 鄠 落 励 𠄝 𠈋 𠔒 𠔞 𠖬 𠩅  "𠬹" "𠮹" 𠲟
             List<clsKeyWord_web_info> Reaad_ALLWord_webResult = new List<clsKeyWord_web_info>();
             int onindex1 = 0;
             int onindex2 = 0;
@@ -665,12 +665,14 @@ namespace clsBuiness
                 }
                 if (viewForm != null)
                 {
+                    MyWebBrower.Dispose();
                     MyWebBrower = null;
                     viewForm.Close();
-
+                    viewForm.Dispose();
                 }
                 Thread.Sleep(1000);
                 jiegoudaima = 1;
+                isrun = ProcessStatus.初始化;
                 isOneFinished = false;
                 login = 0;
                 //获取结构
@@ -705,8 +707,10 @@ namespace clsBuiness
                 }
                 if (viewForm != null)
                 {
+                    MyWebBrower.Dispose();
                     MyWebBrower = null;
                     viewForm.Close();
+                    viewForm.Dispose();
 
                 }
                 Reaad_ALLWord_webResult.Add(ALLWord_webResult[ongoingIndex]);
