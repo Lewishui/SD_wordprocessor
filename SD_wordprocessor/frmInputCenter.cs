@@ -8,13 +8,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 
 namespace SD_wordprocessor
 {
+
+   
     public partial class frmInputCenter : Form
     {
+        [DllImport("wininet.dll")]
         List<clsword_info> userlist_Server;
         List<clswordpart_info> wordpart_Server;
         List<clsbushoudaima_info> bushoudaima_Server;
@@ -28,14 +32,42 @@ namespace SD_wordprocessor
         //后加的后台属性显
         private bool backGroundRunResult;
         int findtype = 0;
-
+        bool isnet = false;
         private string txname;
-
+    
         public frmInputCenter()
         {
             InitializeComponent();
             wordpart_Server = new List<clswordpart_info>();
             this.comboBox2.SelectedIndex = 0;
+
+            TabPage tp = tabControl1.TabPages[2];//在这里先保存，以便以后还要显示
+
+            tabControl1.TabPages.Remove(tp);//隐藏（删除）
+
+
+            //  tabControl1.TabPages.Insert(0, tp);//显示（插入）
+            
+            isnet = IsConnectionInternet();
+        }
+
+        private extern static bool InternetGetConnectedState(int Description, int ReservedValue);
+        private bool IsConnectionInternet()
+        {
+            isnet = false;
+            if (InternetGetConnectedState(0, 0) == true)
+            {
+                MessageBox.Show("系统已连上网络");
+                isnet = true;
+
+            }
+            else
+            {
+                MessageBox.Show("系统未连接网络");
+                isnet = false;
+
+            }
+            return isnet;
 
         }
 
@@ -117,7 +149,10 @@ namespace SD_wordprocessor
             clsAllnew BusinessHelp = new clsAllnew();
 
             BusinessHelp.createWordKU_Server(userlist_Server);
+            if (isnet == true)
+            {
 
+            }
             MessageBox.Show("创建成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
             // this.Close();
 
@@ -487,6 +522,7 @@ namespace SD_wordprocessor
         {
             clsAllnew BusinessHelp = new clsAllnew();
             Word_webResult = new List<clsKeyWord_web_info>();
+            BusinessHelp.tsStatusLabel2 = toolStripLabel1;
             Word_webResult = BusinessHelp.ReadWeb_Report111();
             int di = 0;
             // foreach (clsKeyWord_web_info item in Word_webResult)
@@ -495,7 +531,7 @@ namespace SD_wordprocessor
                 di++;
 
             }
-            MessageBox.Show("ok");
+            MessageBox.Show("ok" + Word_webResult.Count());
 
 
         }

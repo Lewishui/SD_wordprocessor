@@ -39,6 +39,7 @@ namespace clsBuiness
         private ProcessStatus isrun = ProcessStatus.初始化;
         public ToolStripProgressBar pbStatus { get; set; }
         public ToolStripStatusLabel tsStatusLabel1 { get; set; }
+        public ToolStripStatusLabel tsStatusLabel2 { get; set; }
         public PictureBox pictureBox1;
         int Fwidth;
         int Fheight;
@@ -598,7 +599,8 @@ namespace clsBuiness
             foreach (clsKeyWord_web_info item in ALLWord_webResult)
             {
 
-               // Thread.Sleep(2000); 
+
+                // Thread.Sleep(2000); 
                 #region 繁体转简体
                 if (string.IsNullOrEmpty(ALLWord_webResult[ongoingIndex].word))
                 {
@@ -608,14 +610,17 @@ namespace clsBuiness
                 {
                     string value = ALLWord_webResult[ongoingIndex].word.Trim();
                     string newValue = StringConvert(value, "2");
-                    if (!string.IsNullOrEmpty(newValue)&&!newValue.Contains("?"))
+                    if (!string.IsNullOrEmpty(newValue) && !newValue.Contains("?"))
                     {
                         ALLWord_webResult[ongoingIndex].word = newValue;
 
                     }
                 }
+
                 #endregion
                 //   ALLWord_webResult[0].word = "机";
+                tsStatusLabel2.Text = ALLWord_webResult[ongoingIndex].word + "  --  " + ongoingIndex.ToString() + "/" + ALLWord_webResult.Count.ToString();
+
                 isOneFinished = false;
                 if (onindex1 <= 5)
                 {

@@ -357,12 +357,12 @@ namespace SD_wordprocessor
         {
             if (frmChouchamoshi == null)
             {
-                frmChouchamoshi = new frmChouchamoshi();
+                frmChouchamoshi = new frmChouchamoshi(is_AdminIS);
                 frmChouchamoshi.FormClosed += new FormClosedEventHandler(FrmOMS_FormClosed);
             }
             if (frmChouchamoshi == null)
             {
-                frmChouchamoshi = new frmChouchamoshi();
+                frmChouchamoshi = new frmChouchamoshi(is_AdminIS);
             }
             frmChouchamoshi.Show(this.dockPanel2);
         }

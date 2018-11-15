@@ -39,11 +39,13 @@ namespace SD_wordprocessor
         List<clsKeyWord_web_info> Word_web_Server;
         DataTable qtyTable;
         public ReportForm reportForm;
+        bool is_AdminIS;
 
-        public frmChouchamoshi()
+        public frmChouchamoshi(bool is_AdminIS1)
         {
             InitializeComponent();
             Word_web_Server = new List<clsKeyWord_web_info>();
+            is_AdminIS = is_AdminIS1;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -162,7 +164,10 @@ namespace SD_wordprocessor
 
                 List<clsKeyWord_web_info> one_Word_web_Server = BusinessHelp.findWord_web(WEBstrSelect);
                 List<clsKeyWord_web_info> Aging_CaseListResult = one_Word_web_Server.FindAll(so => so.mark2 != null && so.mark2 == zucheng_jiegou);
+                {
+                    MessageBox.Show("未查到本条信息！" + txfind);
 
+                }
                 Word_web_Server = Word_web_Server.Concat(Aging_CaseListResult).ToList();
 
             }
@@ -710,7 +715,12 @@ namespace SD_wordprocessor
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            var form = new frmInputCenter( );
+            if (is_AdminIS == false)
+            {
+                MessageBox.Show("权限不够");
+
+            }
+            var form = new frmInputCenter();
 
             if (form.ShowDialog() == DialogResult.OK)
             {
