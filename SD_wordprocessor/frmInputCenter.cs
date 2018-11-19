@@ -15,10 +15,10 @@ using System.Windows.Forms;
 namespace SD_wordprocessor
 {
 
-   
+
     public partial class frmInputCenter : Form
     {
-      //  [DllImport("wininet.dll")]
+        //  [DllImport("wininet.dll")]
         List<clsword_info> userlist_Server;
         List<clswordpart_info> wordpart_Server;
         List<clsbushoudaima_info> bushoudaima_Server;
@@ -34,7 +34,7 @@ namespace SD_wordprocessor
         int findtype = 0;
         bool isnet = false;
         private string txname;
-    
+
         public frmInputCenter()
         {
             InitializeComponent();
@@ -47,8 +47,8 @@ namespace SD_wordprocessor
 
 
             //  tabControl1.TabPages.Insert(0, tp);//显示（插入）
-            
-           // isnet = IsConnectionInternet();
+
+            // isnet = IsConnectionInternet();
         }
 
         //private extern static bool InternetGetConnectedState(int Description, int ReservedValue);
@@ -524,10 +524,13 @@ namespace SD_wordprocessor
             Word_webResult = new List<clsKeyWord_web_info>();
             BusinessHelp.tsStatusLabel2 = toolStripLabel1;
             Word_webResult = BusinessHelp.ReadWeb_Report111();
+            //临时读取本地记事本写到数据库内
+            //   Word_webResult= BusinessHelp.add_localdownxword_txto_server();
+
+
             int di = 0;
-            // foreach (clsKeyWord_web_info item in Word_webResult)
             {
-              //  BusinessHelp.createWord_web_Server(Word_webResult);
+                BusinessHelp.createWord_web_Server(Word_webResult);
                 di++;
 
             }

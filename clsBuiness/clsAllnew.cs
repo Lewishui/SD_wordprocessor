@@ -4,6 +4,7 @@ using mshtml;
 using Order.Common;
 using SDdb;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -736,13 +737,13 @@ namespace clsBuiness
                 altx += item.word + " " + item.pianpang + " " + item.mark2 + "\r\n";
 
             }
-            string pathw = AppDomain.CurrentDomain.BaseDirectory + "System\\write.txt";
+            //string pathw = AppDomain.CurrentDomain.BaseDirectory + "System\\write.txt";
 
-            StreamWriter sw = new StreamWriter(pathw);
-            sw.WriteLine(altx);
-            sw.Flush();
-            sw.Close();
-            File.Copy(pathw, @"D:\Devlop\word_processor\txt记录\write" + DateTime.Now.ToString("yyyyMMddHHmmss")+".txt", true);
+            //StreamWriter sw = new StreamWriter(pathw);
+            //sw.WriteLine(altx);
+            //sw.Flush();
+            //sw.Close();
+            //File.Copy(pathw, @"D:\Devlop\word_processor\txt记录\write" + DateTime.Now.ToString("yyyyMMddHHmmss")+".txt", true);
             //2793 3306 2804 10916 3984
             return Reaad_ALLWord_webResult;
 
@@ -1497,6 +1498,69 @@ namespace clsBuiness
 
         }
 
+        public List<clsKeyWord_web_info> add_localdownxword_txto_server()
+        {
+
+            string path1 = AppDomain.CurrentDomain.BaseDirectory + "System\\all word .txt";
+       
+            path1 = @"D:\Devlop\word_processor\txt记录";
+            List<string> Alist = GetBy_CategoryReportFileName(path1);
+            ALLWord_webResult = new List<clsKeyWord_web_info>();
+            for (int im = 0; im < Alist.Count; im++)
+            {
+                string oapat = path1 + "\\" + Alist[im];
+
+                string[] fileText1 = File.ReadAllLines(oapat);
+               
+                for (int i = 0; i < fileText1.Length; i++)
+                {
+                    string[] tatile1 = System.Text.RegularExpressions.Regex.Split(fileText1[i], " ");
+                    for (int iq = 0; iq < tatile1.Length; iq++)
+                    {
+                        clsKeyWord_web_info item = new clsKeyWord_web_info();
+                        string name = tatile1[iq];
+                        //   name = "我";
+                        bool ishanzi = HasChineseTest(name);
+                     //   if (tatile1[iq] != null && tatile1[iq] != "" && tatile1[iq] != "鼻")
+                        {
+                            item.word = tatile1[iq];
+                            if (tatile1.Length>1)
+                            item.pianpang = tatile1[1];
+                            if (tatile1.Length > 2)
+                            item.mark2 = tatile1[2];
+                            ALLWord_webResult.Add(item);
+                            break;
+
+                        }
+                    }
+                }
+            }
+            return ALLWord_webResult;
+
+        }
+
+        //获取文件路径方法‘
+        public List<string> GetBy_CategoryReportFileName(string dirPath)
+        {
+
+            List<string> FileNameList = new List<string>();
+            ArrayList list = new ArrayList();
+
+            if (Directory.Exists(dirPath))
+            {
+                list.AddRange(Directory.GetFiles(dirPath));
+            }
+            if (list.Count > 0)
+            {
+                foreach (object item in list)
+                {
+                    if (!item.ToString().Contains("~$"))
+                        FileNameList.Add(item.ToString().Replace(dirPath + "\\", ""));
+                }
+            }
+
+            return FileNameList;
+        }
 
     }
 }

@@ -197,6 +197,7 @@
             this.button7.TabIndex = 40;
             this.button7.Text = "互联网同步";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Visible = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // dataGridView1
