@@ -75,13 +75,13 @@ namespace SD_wordprocessor
             string endday = DateTime.Now.ToString("yyyy/MM/dd");
             dt3 = Convert.ToDateTime(endday);
             DateTime dt2;
-            dt2 = Convert.ToDateTime("2018/11/19");
+            dt2 = Convert.ToDateTime("2018/11/29");
 
             TimeSpan ts = dt2 - dt3;
             int timeTotal = ts.Days;
             if (timeTotal < 0)
             {
-                MessageBox.Show("测试版本运行期已到，请将剩余费用付清 !");
+                //MessageBox.Show("测试版本运行期已到，请将剩余费用付清 !");
                 return;
             }
 

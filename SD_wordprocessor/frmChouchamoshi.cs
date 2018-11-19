@@ -164,8 +164,9 @@ namespace SD_wordprocessor
 
                 List<clsKeyWord_web_info> one_Word_web_Server = BusinessHelp.findWord_web(WEBstrSelect);
                 List<clsKeyWord_web_info> Aging_CaseListResult = one_Word_web_Server.FindAll(so => so.mark2 != null && so.mark2 == zucheng_jiegou);
+                if (Aging_CaseListResult.Count==0)
                 {
-                    MessageBox.Show("未查到本条信息！" + txfind);
+                    MessageBox.Show("未查到本条信息,或录入信息错误！" + txfind);
 
                 }
                 Word_web_Server = Word_web_Server.Concat(Aging_CaseListResult).ToList();

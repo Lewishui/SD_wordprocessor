@@ -339,35 +339,36 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{03C1CA49-9256-49BA-A268-8EE1A3AD0F9B}</td><td>INSTALLDIR</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td>{ABF6D4EC-CA3C-458B-9610-E765B16BBD0B}</td><td>INSTALLDIR</td><td>2</td><td/><td>icsharpcode.sharpziplib.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{759E25AE-52BA-418F-BD5D-FDB40A147178}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{D0FC2463-8399-450F-830E-F3BBDD139F98}</td><td>SYSTEM</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>IrisSkin2.dll</td><td>{19CB1414-AC76-49E8-B59D-CA67DD289716}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{83786CA7-47B7-4E50-9259-D34A2BA009B9}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.Common.dll</td><td>{97A6103C-7FEE-47B4-8590-FD3BFC08E9AB}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.Design.resources.dll</td><td>{18F43498-F899-4259-891D-7D8B3F6DB0A9}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.desig</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>{6D4A8B79-A650-482D-ABCB-CB6D96F31B96}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.proce</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WebDesign.DLL</td><td>{C46E5DA4-06AA-49BA-BFCC-15A38D1EEF85}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webde</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td>{7D04254A-2FDC-4501-99D0-14AD36E576F7}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webde1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WebForms.DLL</td><td>{6A02811F-B0DF-47A1-87F9-1037D99A60D4}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td>{9225753A-59DD-4CBF-B65D-914E193EF355}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webfo1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td>{CDD418B1-2F19-4BA5-999E-CA96556E310D}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td>{E077FE08-A584-4B0F-A6B3-4050C8515896}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.SqlServer.Types.dll</td><td>{BA142D78-B080-4EFA-8CEA-C400C7122763}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.sqlserver.types.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>MySql.Data.dll</td><td>{1C3DC7E6-4FA2-4825-BFC1-4DBBABC98D05}</td><td>INSTALLDIR</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NPOI.OOXML.dll</td><td>{6F231B9E-2290-45BC-AB06-A7DDC0998EE7}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.ooxml.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NPOI.OpenXml4Net.dll</td><td>{2D04C76C-1EB0-43B5-BBE9-D6F6AB1B9E20}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.openxml4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NPOI.OpenXmlFormats.dll</td><td>{E50D174D-0E0B-4BC7-AC87-3E5C8E995341}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.openxmlformats.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>NPOI.dll</td><td>{54B36B3A-C2E1-45B3-8A8D-217E2BAD5C34}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{1DB44BFB-4111-439D-BF34-7E52D40C73DB}</td><td>SYSTEM</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Interop.SHDocVw.dll</td><td>{27221CE7-2698-4425-B710-EC6B771FFD90}</td><td>INSTALLDIR</td><td>2</td><td/><td>interop.shdocvw.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>IrisSkin2.dll</td><td>{52C15809-E008-4B05-97A1-293FA97E8D2C}</td><td>INSTALLDIR</td><td>2</td><td/><td>irisskin2.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td>{B5AB6B6D-4D3A-46F5-8498-903FD376F037}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.office.interop.exc</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td>{3422C78E-C6F7-431B-A060-46F191A32710}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.commo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.Design.resources.dll</td><td>{684B447A-D72B-4ED7-B53B-FB6B16738DA7}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.desig</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>{DC5D4AAA-C0B5-444F-8C86-BA6173C24414}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.proce</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WebDesign.DLL</td><td>{36B1D640-64D7-423D-81AA-ADE025E601CB}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webde</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td>{A1C38582-7D55-4D43-8A44-EFA14962E3F3}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webde1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WebForms.DLL</td><td>{FCA881FC-0FE6-4EAA-AF62-F5D68BBE57E8}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td>{A1AB9A6A-5C5E-470E-892B-9E9DB8197980}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.webfo1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td>{7951A1FE-A4BA-49F3-AB16-DF48CD285824}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td>{BD02775F-A334-422A-987F-B6574DB62CA5}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo1</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Microsoft.SqlServer.Types.dll</td><td>{CDE2358A-BB17-4BE8-AA2C-5F2994C2F803}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.sqlserver.types.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>MySql.Data.dll</td><td>{6DFE2446-5B86-4A90-9A30-1AEA8B3F9FB6}</td><td>INSTALLDIR</td><td>2</td><td/><td>mysql.data.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NPOI.OOXML.dll</td><td>{7D8A9406-50A1-482F-9598-F3BED2CF8762}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.ooxml.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NPOI.OpenXml4Net.dll</td><td>{579767BC-EBF6-40D1-B319-6A1ACB7FB6EF}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.openxml4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NPOI.OpenXmlFormats.dll</td><td>{1C2B48C8-4B17-43B9-8265-40463C9E7FA8}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.openxmlformats.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>NPOI.dll</td><td>{01D4191C-D282-429A-AC4D-91C5AC1F9BDB}</td><td>INSTALLDIR</td><td>2</td><td/><td>npoi.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>NewComponent1</td><td>{8CC7B7DC-47F2-4DB0-9BF8-7E03E2ABF00D}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Order.Common.dll</td><td>{69AF8CEE-D5D3-405A-91E6-CB10A24E6F5C}</td><td>INSTALLDIR</td><td>2</td><td/><td>order.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SD_wordprocessor.exe</td><td>{361CFE1E-003D-442A-BBF0-8570E9BBDFDC}</td><td>INSTALLDIR</td><td>2</td><td/><td>sd_wordprocessor.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SD_wordprocessor.vshost.exe</td><td>{D6A8ED18-3DC9-4BE0-A943-00368A693AC9}</td><td>INSTALLDIR</td><td>2</td><td/><td>sd_wordprocessor.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>SDdb.dll</td><td>{0F11965E-2D11-475F-89B1-1C265FB44151}</td><td>INSTALLDIR</td><td>2</td><td/><td>sddb.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>System.Data.SQLite.dll</td><td>{4A5979BE-8C4A-4725-A711-9CCD48130874}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{2CFA70CF-E65D-4CF0-820C-A261680E3015}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>clsBuiness.dll</td><td>{7DA6EF91-2428-4299-9938-D82E92440027}</td><td>INSTALLDIR</td><td>2</td><td/><td>clsbuiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>log4net.dll</td><td>{EC4622AE-7B97-488C-AAF5-C6B4FF564926}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Order.Common.dll</td><td>{3C9CB33D-5659-419E-B7B5-B808730A628E}</td><td>INSTALLDIR</td><td>2</td><td/><td>order.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SD_wordprocessor.exe</td><td>{80C8CC74-03CD-4C22-A178-B9E1D2C125B7}</td><td>INSTALLDIR</td><td>2</td><td/><td>sd_wordprocessor.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SD_wordprocessor.vshost.exe</td><td>{74A53CBB-F8DD-467E-8ED1-8AD4CF4D1D2E}</td><td>INSTALLDIR</td><td>2</td><td/><td>sd_wordprocessor.vshost.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>SDdb.dll</td><td>{4E15C122-5662-4613-B89A-8D573840FD9D}</td><td>INSTALLDIR</td><td>2</td><td/><td>sddb.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>System.Data.SQLite.dll</td><td>{8E63A152-32C6-4727-B491-F8459E39FF6D}</td><td>INSTALLDIR</td><td>2</td><td/><td>system.data.sqlite.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>{AB373A64-CF41-4A24-8EC3-2E459E6E316E}</td><td>INSTALLDIR</td><td>2</td><td/><td>weifenluo.winformsui.docking</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>clsBuiness.dll</td><td>{6F52D1B5-781D-435F-B8BA-388868F4A012}</td><td>INSTALLDIR</td><td>2</td><td/><td>clsbuiness.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>log4net.dll</td><td>{E16BA0AA-829A-415F-A1F0-EBB82CD53100}</td><td>INSTALLDIR</td><td>2</td><td/><td>log4net.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1889,6 +1890,7 @@
 		<row><td>AlwaysInstall</td><td>ICSharpCode.SharpZipLib.dll</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
+		<row><td>AlwaysInstall</td><td>Interop.SHDocVw.dll</td></row>
 		<row><td>AlwaysInstall</td><td>IrisSkin2.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.Office.Interop.Excel.dll</td></row>
 		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.Common.dll</td></row>
@@ -1929,43 +1931,52 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>blank.docx</td><td>ISX_DEFAULTCOMPONENT</td><td>BLANK~1.DOC|blank.docx</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\blank.docx</td><td>1</td><td/></row>
-		<row><td>clsbuiness.dll</td><td>clsBuiness.dll</td><td>CLSBUI~1.DLL|clsBuiness.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\clsBuiness.dll</td><td>1</td><td/></row>
-		<row><td>clsbuiness.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>CLSBUI~1.PDB|clsBuiness.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\clsBuiness.pdb</td><td>1</td><td/></row>
-		<row><td>data.sqlite</td><td>ISX_DEFAULTCOMPONENT</td><td>DATA~1.SQL|Data.sqlite</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Data.sqlite</td><td>1</td><td/></row>
-		<row><td>icsharpcode.sharpziplib.dll</td><td>ICSharpCode.SharpZipLib.dll</td><td>ICSHAR~1.DLL|ICSharpCode.SharpZipLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\ICSharpCode.SharpZipLib.dll</td><td>1</td><td/></row>
-		<row><td>ip.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>IP.txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System\IP.txt</td><td>1</td><td/></row>
-		<row><td>irisskin2.dll</td><td>IrisSkin2.dll</td><td>IRISSK~1.DLL|IrisSkin2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\IrisSkin2.dll</td><td>1</td><td/></row>
-		<row><td>log4net.dll</td><td>log4net.dll</td><td>log4net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\log4net.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.office.interop.exc</td><td>Microsoft.Office.Interop.Excel.dll</td><td>MICROS~1.DLL|Microsoft.Office.Interop.Excel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.Office.Interop.Excel.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.commo</td><td>Microsoft.ReportViewer.Common.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.Common.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.desig</td><td>Microsoft.ReportViewer.Design.resources.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.Design.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.Design.resources.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.proce</td><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.webde</td><td>Microsoft.ReportViewer.WebDesign.DLL</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WebDesign.DLL</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WebDesign.DLL</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.webde1</td><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WebDesign.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WebDesign.resources.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.webfo</td><td>Microsoft.ReportViewer.WebForms.DLL</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WebForms.DLL</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WebForms.DLL</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.webfo1</td><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WebForms.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WebForms.resources.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.winfo</td><td>Microsoft.ReportViewer.WinForms.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WinForms.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WinForms.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.winfo1</td><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WinForms.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WinForms.resources.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.sqlserver.types.dl</td><td>Microsoft.SqlServer.Types.dll</td><td>MICROS~1.DLL|Microsoft.SqlServer.Types.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.SqlServer.Types.dll</td><td>1</td><td/></row>
-		<row><td>mysql.data.dll</td><td>MySql.Data.dll</td><td>MYSQLD~1.DLL|MySql.Data.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\MySql.Data.dll</td><td>1</td><td/></row>
-		<row><td>npoi.dll</td><td>NPOI.dll</td><td>NPOI.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.dll</td><td>1</td><td/></row>
-		<row><td>npoi.ooxml.dll</td><td>NPOI.OOXML.dll</td><td>NPOIOO~1.DLL|NPOI.OOXML.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OOXML.dll</td><td>1</td><td/></row>
-		<row><td>npoi.openxml4net.dll</td><td>NPOI.OpenXml4Net.dll</td><td>NPOIOP~1.DLL|NPOI.OpenXml4Net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXml4Net.dll</td><td>1</td><td/></row>
-		<row><td>npoi.openxmlformats.dll</td><td>NPOI.OpenXmlFormats.dll</td><td>NPOIOP~1.DLL|NPOI.OpenXmlFormats.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXmlFormats.dll</td><td>1</td><td/></row>
-		<row><td>npoi.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>NPOI.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.xml</td><td>1</td><td/></row>
-		<row><td>order.common.dll</td><td>Order.Common.dll</td><td>ORDERC~1.DLL|Order.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Order.Common.dll</td><td>1</td><td/></row>
-		<row><td>order.common.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDERC~1.PDB|Order.Common.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Order.Common.pdb</td><td>1</td><td/></row>
-		<row><td>report3.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report3.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Report3.rdlc</td><td>1</td><td/></row>
-		<row><td>sd_wordprocessor.exe</td><td>SD_wordprocessor.exe</td><td>SD_WOR~1.EXE|SD_wordprocessor.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe</td><td>1</td><td/></row>
-		<row><td>sd_wordprocessor.exe.config</td><td>ISX_DEFAULTCOMPONENT</td><td>SD_WOR~1.CON|SD_wordprocessor.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe.config</td><td>1</td><td/></row>
-		<row><td>sd_wordprocessor.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>SD_WOR~1.PDB|SD_wordprocessor.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.pdb</td><td>1</td><td/></row>
-		<row><td>sd_wordprocessor.vshost.exe</td><td>SD_wordprocessor.vshost.exe</td><td>SD_WOR~1.EXE|SD_wordprocessor.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.vshost.exe</td><td>1</td><td/></row>
-		<row><td>sd_wordprocessor.vshost.exe.</td><td>ISX_DEFAULTCOMPONENT</td><td>SD_WOR~1.CON|SD_wordprocessor.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.vshost.exe.config</td><td>1</td><td/></row>
-		<row><td>sddb.dll</td><td>SDdb.dll</td><td>SDdb.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SDdb.dll</td><td>1</td><td/></row>
-		<row><td>sddb.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>SDdb.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SDdb.pdb</td><td>1</td><td/></row>
-		<row><td>system.data.sqlite.dll</td><td>System.Data.SQLite.dll</td><td>SYSTEM~1.DLL|System.Data.SQLite.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System.Data.SQLite.dll</td><td>1</td><td/></row>
-		<row><td>weifenluo.winformsui.docking</td><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>WEIFEN~1.DLL|WeifenLuo.WinFormsUI.Docking.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Dev Project\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</td><td>1</td><td/></row>
+		<row><td>File.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>ALLWOR~1.TXT|all word  - 副本.txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System\all word  - 副本.txt</td><td>1</td><td/></row>
+		<row><td>File.txt1</td><td>ISX_DEFAULTCOMPONENT1</td><td>ALLWOR~1.TXT|all word vs正在跑.txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System\all word vs正在跑.txt</td><td>1</td><td/></row>
+		<row><td>_.jpg</td><td>ISX_DEFAULTCOMPONENT1</td><td>1.jpg</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System\1.jpg</td><td>1</td><td/></row>
+		<row><td>_6.png</td><td>ISX_DEFAULTCOMPONENT1</td><td>16.png</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System\16.png</td><td>1</td><td/></row>
+		<row><td>all_word_.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>ALLWOR~1.TXT|all word .txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System\all word .txt</td><td>1</td><td/></row>
+		<row><td>all_word____vs1.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>ALLWOR~1.TXT|all word  - VS1.txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System\all word  - VS1.txt</td><td>1</td><td/></row>
+		<row><td>blank.docx</td><td>ISX_DEFAULTCOMPONENT</td><td>BLANK~1.DOC|blank.docx</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\blank.docx</td><td>1</td><td/></row>
+		<row><td>clsbuiness.dll</td><td>clsBuiness.dll</td><td>CLSBUI~1.DLL|clsBuiness.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\clsBuiness.dll</td><td>1</td><td/></row>
+		<row><td>clsbuiness.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>CLSBUI~1.PDB|clsBuiness.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\clsBuiness.pdb</td><td>1</td><td/></row>
+		<row><td>data.sqlite</td><td>ISX_DEFAULTCOMPONENT</td><td>DATA~1.SQL|Data.sqlite</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Data.sqlite</td><td>1</td><td/></row>
+		<row><td>icsharpcode.sharpziplib.dll</td><td>ICSharpCode.SharpZipLib.dll</td><td>ICSHAR~1.DLL|ICSharpCode.SharpZipLib.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\ICSharpCode.SharpZipLib.dll</td><td>1</td><td/></row>
+		<row><td>interop.shdocvw.dll</td><td>Interop.SHDocVw.dll</td><td>INTERO~1.DLL|Interop.SHDocVw.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Interop.SHDocVw.dll</td><td>1</td><td/></row>
+		<row><td>ip.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>IP.txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System\IP.txt</td><td>1</td><td/></row>
+		<row><td>irisskin2.dll</td><td>IrisSkin2.dll</td><td>IRISSK~1.DLL|IrisSkin2.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\IrisSkin2.dll</td><td>1</td><td/></row>
+		<row><td>log4net.dll</td><td>log4net.dll</td><td>log4net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\log4net.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.office.interop.exc</td><td>Microsoft.Office.Interop.Excel.dll</td><td>MICROS~1.DLL|Microsoft.Office.Interop.Excel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.Office.Interop.Excel.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.commo</td><td>Microsoft.ReportViewer.Common.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.Common.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.desig</td><td>Microsoft.ReportViewer.Design.resources.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.Design.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.Design.resources.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.proce</td><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.webde</td><td>Microsoft.ReportViewer.WebDesign.DLL</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WebDesign.DLL</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WebDesign.DLL</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.webde1</td><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WebDesign.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WebDesign.resources.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.webfo</td><td>Microsoft.ReportViewer.WebForms.DLL</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WebForms.DLL</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WebForms.DLL</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.webfo1</td><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WebForms.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WebForms.resources.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.winfo</td><td>Microsoft.ReportViewer.WinForms.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WinForms.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WinForms.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.reportviewer.winfo1</td><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WinForms.resources.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.ReportViewer.WinForms.resources.dll</td><td>1</td><td/></row>
+		<row><td>microsoft.sqlserver.types.dl</td><td>Microsoft.SqlServer.Types.dll</td><td>MICROS~1.DLL|Microsoft.SqlServer.Types.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Microsoft.SqlServer.Types.dll</td><td>1</td><td/></row>
+		<row><td>mysql.data.dll</td><td>MySql.Data.dll</td><td>MYSQLD~1.DLL|MySql.Data.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\MySql.Data.dll</td><td>1</td><td/></row>
+		<row><td>npoi.dll</td><td>NPOI.dll</td><td>NPOI.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.dll</td><td>1</td><td/></row>
+		<row><td>npoi.ooxml.dll</td><td>NPOI.OOXML.dll</td><td>NPOIOO~1.DLL|NPOI.OOXML.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OOXML.dll</td><td>1</td><td/></row>
+		<row><td>npoi.openxml4net.dll</td><td>NPOI.OpenXml4Net.dll</td><td>NPOIOP~1.DLL|NPOI.OpenXml4Net.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXml4Net.dll</td><td>1</td><td/></row>
+		<row><td>npoi.openxmlformats.dll</td><td>NPOI.OpenXmlFormats.dll</td><td>NPOIOP~1.DLL|NPOI.OpenXmlFormats.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.OpenXmlFormats.dll</td><td>1</td><td/></row>
+		<row><td>npoi.xml</td><td>ISX_DEFAULTCOMPONENT</td><td>NPOI.xml</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\NPOI.xml</td><td>1</td><td/></row>
+		<row><td>order.common.dll</td><td>Order.Common.dll</td><td>ORDERC~1.DLL|Order.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Order.Common.dll</td><td>1</td><td/></row>
+		<row><td>order.common.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDERC~1.PDB|Order.Common.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Order.Common.pdb</td><td>1</td><td/></row>
+		<row><td>report3.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report3.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\Report3.rdlc</td><td>1</td><td/></row>
+		<row><td>sd_wordprocessor.exe</td><td>SD_wordprocessor.exe</td><td>SD_WOR~1.EXE|SD_wordprocessor.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe</td><td>1</td><td/></row>
+		<row><td>sd_wordprocessor.exe.config</td><td>ISX_DEFAULTCOMPONENT</td><td>SD_WOR~1.CON|SD_wordprocessor.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe.config</td><td>1</td><td/></row>
+		<row><td>sd_wordprocessor.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>SD_WOR~1.PDB|SD_wordprocessor.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.pdb</td><td>1</td><td/></row>
+		<row><td>sd_wordprocessor.vshost.exe</td><td>SD_wordprocessor.vshost.exe</td><td>SD_WOR~1.EXE|SD_wordprocessor.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.vshost.exe</td><td>1</td><td/></row>
+		<row><td>sd_wordprocessor.vshost.exe.</td><td>ISX_DEFAULTCOMPONENT</td><td>SD_WOR~1.CON|SD_wordprocessor.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.vshost.exe.config</td><td>1</td><td/></row>
+		<row><td>sd_wordprocessor.vshost.exe.1</td><td>ISX_DEFAULTCOMPONENT</td><td>SD_WOR~1.MAN|SD_wordprocessor.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.vshost.exe.manifest</td><td>1</td><td/></row>
+		<row><td>sddb.dll</td><td>SDdb.dll</td><td>SDdb.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SDdb.dll</td><td>1</td><td/></row>
+		<row><td>sddb.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>SDdb.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SDdb.pdb</td><td>1</td><td/></row>
+		<row><td>system.data.sqlite.dll</td><td>System.Data.SQLite.dll</td><td>SYSTEM~1.DLL|System.Data.SQLite.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System.Data.SQLite.dll</td><td>1</td><td/></row>
+		<row><td>weifenluo.winformsui.docking</td><td>WeifenLuo.WinFormsUI.Docking.dll</td><td>WEIFEN~1.DLL|WeifenLuo.WinFormsUI.Docking.dll</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\WeifenLuo.WinFormsUI.Docking.dll</td><td>1</td><td/></row>
+		<row><td>write.txt</td><td>ISX_DEFAULTCOMPONENT1</td><td>write.txt</td><td>0</td><td/><td/><td/><td>1</td><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\System\write.txt</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2222,35 +2233,36 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_8267A529_8F4B_4F49_B776_4D325F6A5019_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ICSharpCode.SharpZipLib.dll</td><td/><td/><td>_45C2D86E_6EC4_41F5_8A13_83A67B3A9BBA_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_45A9532A_E967_479F_8F4C_835640ED9469_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_EABC8813_861B_4464_8A32_DC7CD0A0DDA1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>IrisSkin2.dll</td><td/><td/><td>_02810448_3C00_45E9_9B7B_73D8D7B11AF5_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_D6CC3529_FD0F_43A8_A96D_4EB6EB9FDEA7_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.Common.dll</td><td/><td/><td>_23470728_6D4F_482A_943A_ADFF59AA0C14_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.Design.resources.dll</td><td/><td/><td>_70336A1A_4EB2_4F09_B3C6_74084E91BFD7_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td/><td/><td>_9F472C91_C115_4EEA_BB05_B59570A4EEE1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WebDesign.DLL</td><td/><td/><td>_EBA596C9_F857_429A_8FF7_89F3FED96337_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td/><td/><td>_8F5F0AAB_CC15_48F6_8814_27304C07D3B0_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WebForms.DLL</td><td/><td/><td>_70097BB8_32F1_4748_A186_B4BD70401A6C_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td/><td/><td>_C01341F5_02DE_4506_A25C_47336E739B79_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td/><td/><td>_F5AE7767_445B_4401_8F27_4F0D73A77934_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td/><td/><td>_127EBBE8_8974_4231_945F_5C7A2620380D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.SqlServer.Types.dll</td><td/><td/><td>_8B0E22C0_BA26_491F_B657_9929495CE879_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>MySql.Data.dll</td><td/><td/><td>_E8B92F69_FECA_47B7_B907_A2D8A5E7716A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NPOI.OOXML.dll</td><td/><td/><td>_3BD79AE3_2D40_48E9_B00B_4F991D36EB55_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NPOI.OpenXml4Net.dll</td><td/><td/><td>_8596AACF_14C3_4E82_81D8_4658C289C32B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NPOI.OpenXmlFormats.dll</td><td/><td/><td>_DAD3B024_01C5_4078_8EDD_988A16C2B4C3_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>NPOI.dll</td><td/><td/><td>_D45C0748_7B25_419A_8C96_453B413DE27F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_9706ACA7_28CB_422A_A9DD_E21EEE11D798_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Interop.SHDocVw.dll</td><td/><td/><td>_FBB4EB6F_4E44_4E97_91FA_C49AB9587C7F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>IrisSkin2.dll</td><td/><td/><td>_B2B189A6_06AD_4EBA_B345_41BA03695764_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.Office.Interop.Excel.dll</td><td/><td/><td>_D51F5581_C5CF_4373_ACA9_4867146F507D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.Common.dll</td><td/><td/><td>_9F4446FA_C7C2_4942_8201_4CC62E8EF74F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.Design.resources.dll</td><td/><td/><td>_CFD00E0D_5DD3_4BC1_9250_330C9BA5F77F_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.ProcessingObjectModel.dll</td><td/><td/><td>_8B6ADA0E_0697_46A9_BF63_AD3479C12975_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WebDesign.DLL</td><td/><td/><td>_A89FE57C_8243_46A4_9CC2_E76A202FCFCC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WebDesign.resources.dll</td><td/><td/><td>_7237BD80_D157_4323_A24F_2974A423D5D2_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WebForms.DLL</td><td/><td/><td>_06177C21_E948_4D18_A27D_20560C73BE91_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WebForms.resources.dll</td><td/><td/><td>_EBC162CC_6C70_4508_A2B2_41012C6BCE24_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td/><td/><td>_A8B2FB31_A72A_41DF_A7C2_426210D4B6E9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.ReportViewer.WinForms.resources.dll</td><td/><td/><td>_C90050D5_CEF1_4955_A760_866A07C49D95_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Microsoft.SqlServer.Types.dll</td><td/><td/><td>_3D3BDF16_3FD0_44B1_B755_222EAF224B34_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>MySql.Data.dll</td><td/><td/><td>_4F07FC75_EDA2_48E7_B4B0_1D0A1B4DEDB1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NPOI.OOXML.dll</td><td/><td/><td>_B08CAE12_1413_46AC_A0F7_B3A3189346CB_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NPOI.OpenXml4Net.dll</td><td/><td/><td>_C9467F00_E652_4FB7_B33A_AF9077DFC84E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NPOI.OpenXmlFormats.dll</td><td/><td/><td>_C7118D9F_0836_4BF8_809A_9257D68AA48D_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>NPOI.dll</td><td/><td/><td>_E9D2D146_C844_4939_8BCB_959B549E6123_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>NewComponent1</td><td/><td/><td>_087A61EA_3BDB_4F60_BF23_C5633B491A4E_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Order.Common.dll</td><td/><td/><td>_9CEB4B4A_F3E3_4765_BA53_44FDE17EFE8F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SD_wordprocessor.exe</td><td/><td/><td>_636B80F1_2978_4BD8_92A2_14AE2254EA1B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SD_wordprocessor.vshost.exe</td><td/><td/><td>_5236E25E_A40C_44E5_8B44_E038B176547B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>SDdb.dll</td><td/><td/><td>_8DC80DBD_6717_4E40_8B00_FA9D680933D1_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>System.Data.SQLite.dll</td><td/><td/><td>_F2D71CB6_1DE1_4EB6_9B33_07407DD111C4_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_9269DFC0_917B_47DD_B982_8B880D305212_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>clsBuiness.dll</td><td/><td/><td>_2EF544DA_AC0C_43C2_BAA9_67BCB4F11E61_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>log4net.dll</td><td/><td/><td>_5BA2DBB7_5573_48A6_BC4E_5C3E46A9E442_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Order.Common.dll</td><td/><td/><td>_02CA617D_F9E6_4C16_8EA9_97A853899EF1_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SD_wordprocessor.exe</td><td/><td/><td>_EE74427C_4812_4A21_9A5C_132695CEEBB3_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SD_wordprocessor.vshost.exe</td><td/><td/><td>_6A21B0B2_5551_4CF9_AED9_43A884DA4C6C_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>SDdb.dll</td><td/><td/><td>_DE72839F_36A6_4490_8AE4_E352F96E4EAF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>System.Data.SQLite.dll</td><td/><td/><td>_79F09E59_7E0A_4F73_A26C_635D26E727EF_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>WeifenLuo.WinFormsUI.Docking.dll</td><td/><td/><td>_B3F093CC_0991_412A_9D40_C9337B742C7E_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>clsBuiness.dll</td><td/><td/><td>_B1C1039D_5082_4B33_8634_86D077CB88D7_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>log4net.dll</td><td/><td/><td>_E619D574_C591_4054_B475_3D361B19E414_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -3699,6 +3711,14 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>2052</td><td>wordprocessor.exe</td><td>0</td><td/><td>-1255745462</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td/><td>0</td><td/><td>-1255743863</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>2052</td><td>wordprocessor.vshost.exe</td><td>0</td><td/><td>-1255757750</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td/><td>0</td><td/><td>-1650031637</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>2052</td><td>LAUNCH~1.EXE|Launch SD_wordprocessor.exe</td><td>0</td><td/><td>-1650031637</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td/><td>0</td><td/><td>-1650031637</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>2052</td><td>LAUNCH~1.EXE|Launch SD_wordprocessor.vshost.exe</td><td>0</td><td/><td>-1650031637</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>1033</td><td/><td>0</td><td/><td>-1650023157</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME7</td><td>2052</td><td>LAUNCH~1.EXE|Launch SD_wordprocessor.exe</td><td>0</td><td/><td>-1650023157</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>1033</td><td/><td>0</td><td/><td>-1650021109</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME8</td><td>2052</td><td>LAUNCH~1.EXE|Launch SD_wordprocessor.vshost.exe</td><td>0</td><td/><td>-1650021109</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>2052</td><td>从以下服务器列表中选择要连接的数据库服务器。</td><td>0</td><td/><td>-1255764919</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>2052</td><td>从以下的编录名称列表中，选择您希望将其作为目标的数据库编录。</td><td>0</td><td/><td>-1255764919</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>2052</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-1255764919</td></row>
@@ -4104,9 +4124,13 @@
 		<row><td>SD_wordprocessor.e_5511251A36AD4191B287736B1A2F9304.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>SD_wordprocessor.e_7A72325C90CD4EB4BD1A0A2D1A19A72A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>SD_wordprocessor.e_8771F61FD1A54D078795327D5FF31F30.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>SD_wordprocessor.e_AF6F5B31187E4E84A67EC859A2AA6271.exe</td><td/><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe</td><td>0</td></row>
 		<row><td>SD_wordprocessor.e_D7095498E8BB4EEEBFFF44316703BEE5.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>SD_wordprocessor.e_F47140BA75BE4064942DA8849D023BE6.exe</td><td/><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe</td><td>0</td></row>
+		<row><td>SD_wordprocessor.v_1335F7EEFEE04FCA92BBB5332360BE49.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>SD_wordprocessor.v_1C3E15AB2B6849EEA67C33B50EA0C49B.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>SD_wordprocessor.v_99C87318AC224BF484C2E4410ED762A5.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>SD_wordprocessor.v_DA8644904CAB4255873725A8997ABEAD.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_S_D1EBD4A413AC4024B81B76B813A53344.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2012SpringLE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
 
@@ -4777,9 +4801,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>SD_wordprocessor.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>SD_wordprocessor.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SD_wordprocessor.e_D7095498E8BB4EEEBFFF44316703BEE5.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>SD_wordprocessor.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME3##</td><td>SD_wordprocessor.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SD_wordprocessor.e_8771F61FD1A54D078795327D5FF31F30.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>SD_wordprocessor.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>SD_wordprocessor.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SD_wordprocessor.v_99C87318AC224BF484C2E4410ED762A5.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>SD_wordprocessor.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>SD_wordprocessor.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SD_wordprocessor.e_AF6F5B31187E4E84A67EC859A2AA6271.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>SD_wordprocessor.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME8##</td><td>SD_wordprocessor.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SD_wordprocessor.v_DA8644904CAB4255873725A8997ABEAD.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>setup</td><td>UNINST|Uninstall Setup</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {50C1E10F-91AD-4B95-A9E2-6CB4E1161310}</td><td/><td/><td>UNINST_Uninstall_S_D1EBD4A413AC4024B81B76B813A53344.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
