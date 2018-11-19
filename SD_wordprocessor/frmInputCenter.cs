@@ -527,7 +527,7 @@ namespace SD_wordprocessor
             int di = 0;
             // foreach (clsKeyWord_web_info item in Word_webResult)
             {
-                BusinessHelp.createWord_web_Server(Word_webResult);
+              //  BusinessHelp.createWord_web_Server(Word_webResult);
                 di++;
 
             }

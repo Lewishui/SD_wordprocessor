@@ -591,7 +591,7 @@ namespace clsBuiness
             }
             // string ssd = ALLWord_webResult[71111].word;
             ongoingIndex = 0;
-            //㻩 䯊 图 膔 鄠 落 励 𠄝 𠈋 𠔒 𠔞 𠖬 𠩅  "𠬹" "𠮹" 𠲟
+            //㻩 䯊 图 膔 鄠 落 励 𠄝 𠈋 𠔒 𠔞 𠖬 𠩅  "𠬹" "𠮹" 𠲟 𡎽 𡶪 𢁕 𢄋 𢇔 𣥿 𤶦 𦭹
             List<clsKeyWord_web_info> Reaad_ALLWord_webResult = new List<clsKeyWord_web_info>();
             int onindex1 = 0;
             int onindex2 = 0;
@@ -618,7 +618,12 @@ namespace clsBuiness
                 }
 
                 #endregion
-                //   ALLWord_webResult[0].word = "机";
+
+                if (ALLWord_webResult[ongoingIndex].word == "𨘐" || ALLWord_webResult[ongoingIndex].word == "𧙿")  //2861  2683
+                {
+                    MessageBox.Show("到了三星的节点","",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+
+                }
                 tsStatusLabel2.Text = ALLWord_webResult[ongoingIndex].word + "  --  " + ongoingIndex.ToString() + "/" + ALLWord_webResult.Count.ToString();
 
                 isOneFinished = false;
@@ -670,10 +675,10 @@ namespace clsBuiness
                 }
                 if (viewForm != null)
                 {
-                    MyWebBrower.Dispose();
+                 //   MyWebBrower.Dispose();
                     MyWebBrower = null;
                     viewForm.Close();
-                    viewForm.Dispose();
+                  //  viewForm.Dispose();
                 }
                 Thread.Sleep(1000);
                 jiegoudaima = 1;
@@ -712,10 +717,10 @@ namespace clsBuiness
                 }
                 if (viewForm != null)
                 {
-                    MyWebBrower.Dispose();
+                  //  MyWebBrower.Dispose();
                     MyWebBrower = null;
                     viewForm.Close();
-                    viewForm.Dispose();
+                  //  viewForm.Dispose();
 
                 }
                 Reaad_ALLWord_webResult.Add(ALLWord_webResult[ongoingIndex]);
@@ -724,6 +729,20 @@ namespace clsBuiness
 
 
             }
+            string altx = "";
+
+            foreach (clsKeyWord_web_info item in Reaad_ALLWord_webResult)
+            {
+                altx += item.word + " " + item.pianpang + " " + item.mark2 + "\r\n";
+
+            }
+            string pathw = AppDomain.CurrentDomain.BaseDirectory + "System\\write.txt";
+
+            StreamWriter sw = new StreamWriter(pathw);
+            sw.WriteLine(altx);
+            sw.Flush();
+            sw.Close();
+            File.Copy(pathw, @"D:\Devlop\word_processor\txt记录\write" + DateTime.Now.ToString("yyyyMMddHHmmss")+".txt", true);
             //2793 3306 2804 10916 3984
             return Reaad_ALLWord_webResult;
 
@@ -768,7 +787,7 @@ namespace clsBuiness
                 viewForm.Controls.Clear();
                 viewForm.Controls.Add(MyWebBrower);
                 viewForm.FormClosing += new FormClosingEventHandler(viewForm_FormClosing);
-                viewForm.Show();
+                // viewForm.Show();
                 if (jiegoudaima == 0)
                 {
                     MyWebBrower.Url = new Uri("http://tool.httpcn.com/Zi/BuShou.html");
