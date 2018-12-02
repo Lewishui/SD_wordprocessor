@@ -11,5 +11,4 @@ D:\Devlop\word_processor\SD_wordprocessor\SDdb\bin\Debug\SDdb.dll
 D:\Devlop\word_processor\SD_wordprocessor\SDdb\bin\Debug\SDdb.pdb
 D:\Devlop\word_processor\SD_wordprocessor\SDdb\obj\Debug\SDdb.dll
 D:\Devlop\word_processor\SD_wordprocessor\SDdb\obj\Debug\SDdb.pdb
-D:\Devlop\word_processor\SD_wordprocessor\SDdb\obj\Debug\SDdb.csprojResolveAssemblyReference.cache
 D:\Dev Project\word_processor\SD_wordprocessor\SDdb\obj\Debug\SDdb.csprojResolveAssemblyReference.cache

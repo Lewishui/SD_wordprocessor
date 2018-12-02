@@ -4013,6 +4013,8 @@
 		<row><td>ID_STRING3</td><td>2052</td><td>LAUNCH~1.EXE|Launch SD_wordprocessor.exe</td><td>0</td><td/><td>-1255791479</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>wordprocessor.exe</td><td>0</td><td/><td>-1255743414</td></row>
 		<row><td>ID_STRING4</td><td>2052</td><td>wordprocessor.exe</td><td>0</td><td/><td>-1255743414</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch SD_wordprocessor.exe</td><td>0</td><td/><td>371618028</td></row>
+		<row><td>ID_STRING5</td><td>2052</td><td>LAUNCH~1.EXE|Launch SD_wordprocessor.exe</td><td>0</td><td/><td>371618028</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>2052</td><td>系统将不安装此功能。</td><td>0</td><td/><td>-1255764919</td></row>
 	</table>
 
@@ -4121,6 +4123,7 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
+		<row><td>SD_wordprocessor.e_385A8712C7BE4EBAB7182B7D2371ACD6.exe</td><td/><td>D:\Devlop\word_processor\SD_wordprocessor\SD_wordprocessor\bin\Debug\SD_wordprocessor.exe</td><td>0</td></row>
 		<row><td>SD_wordprocessor.e_5511251A36AD4191B287736B1A2F9304.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>SD_wordprocessor.e_7A72325C90CD4EB4BD1A0A2D1A19A72A.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>SD_wordprocessor.e_8771F61FD1A54D078795327D5FF31F30.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
@@ -4802,6 +4805,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
 		<row><td>SD_wordprocessor.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>SD_wordprocessor.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SD_wordprocessor.e_AF6F5B31187E4E84A67EC859A2AA6271.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>SD_wordprocessor.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME7##</td><td>SD_wordprocessor.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SD_wordprocessor.e_385A8712C7BE4EBAB7182B7D2371ACD6.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>SD_wordprocessor.vshost.exe</td><td>setup</td><td>##IDS_SHORTCUT_DISPLAY_NAME8##</td><td>SD_wordprocessor.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>SD_wordprocessor.v_DA8644904CAB4255873725A8997ABEAD.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Setup</td><td>setup</td><td>UNINST|Uninstall Setup</td><td>NewComponent1</td><td>[SystemFolder]msiexec.exe</td><td>/x {50C1E10F-91AD-4B95-A9E2-6CB4E1161310}</td><td/><td/><td>UNINST_Uninstall_S_D1EBD4A413AC4024B81B76B813A53344.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>

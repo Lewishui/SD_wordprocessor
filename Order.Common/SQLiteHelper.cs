@@ -116,6 +116,7 @@ namespace Order.Common
                 catch (Exception ex)
                 {
                     trans.Rollback();
+                    return 1;
                     throw ex;
                 }
             }
