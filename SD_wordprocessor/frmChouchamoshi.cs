@@ -65,7 +65,31 @@ namespace SD_wordprocessor
             //this.textBox2.Text = "";
             txfind = this.textBox1.Text;
             string alltxfind = this.textBox1.Text;
+            #region 判断单独4 个代码是不是一个 字的功能
+            int stepmethod = 0;
+            if (stepmethod == 0 && alltxfind != "")
+            {
+                string[] fileTextall = System.Text.RegularExpressions.Regex.Split(alltxfind, " ");
+                for (int iqqq = 0; iqqq < fileTextall.Length; iqqq++)
+                {
+                    string strSelect1 = "select * from Word_ku where zhengtidaima ='" + fileTextall[iqqq].ToString() + "'";
+                    Orderinfolist_Server = new List<clsword_info>();
+                    Orderinfolist_Server = BusinessHelp.findWord(strSelect1);
+                    clsKeyWord_web_info item = new clsKeyWord_web_info();
+                    if (Orderinfolist_Server.Count > 0)
+                    {
+                        item.word = Orderinfolist_Server[0].zi;
+                        List<clsKeyWord_web_info> bew = new List<clsKeyWord_web_info>();
+                        bew.Add(item);
 
+                        Word_web_Server = Word_web_Server.Concat(bew).ToList();
+                    }
+                }
+            }
+
+
+
+            #endregion
             int ddd = txfind.Replace(" ", "").Length / 4;
             int index = ddd / 5;
             string s = "7521 9991 8531 9991 7452 ";
@@ -164,7 +188,7 @@ namespace SD_wordprocessor
 
                 List<clsKeyWord_web_info> one_Word_web_Server = BusinessHelp.findWord_web(WEBstrSelect);
                 List<clsKeyWord_web_info> Aging_CaseListResult = one_Word_web_Server.FindAll(so => so.mark2 != null && so.mark2 == zucheng_jiegou);
-                if (Aging_CaseListResult.Count==0)
+                if (Aging_CaseListResult.Count == 0)
                 {
                     MessageBox.Show("未查到本条信息,或录入信息错误！" + txfind);
 
@@ -727,6 +751,12 @@ namespace SD_wordprocessor
             {
 
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            button1_Click(null, EventArgs.Empty);
+
         }
 
 

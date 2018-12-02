@@ -1412,6 +1412,7 @@ namespace clsBuiness
         }
 
 
+
         public void createWord_web_Server(List<clsKeyWord_web_info> AddMAPResult)
         {
             foreach (clsKeyWord_web_info item in AddMAPResult)
@@ -1562,5 +1563,16 @@ namespace clsBuiness
             return FileNameList;
         }
 
+        public void addnew( )
+        {
+           // string sql2 = "delete from Word_web where  word='" + name + "'";
+            string sql2 = "DROP TABLE Word_web";
+
+            int result = SQLiteHelper.ExecuteNonQuery(SQLiteHelper.CONNECTION_STRING_BASE, sql2, CommandType.Text, null);
+
+            return;
+
+        }
+      
     }
 }

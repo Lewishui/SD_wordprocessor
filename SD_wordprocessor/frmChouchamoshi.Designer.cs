@@ -45,6 +45,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -57,7 +58,6 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -160,6 +160,7 @@
             this.textBox1.Size = new System.Drawing.Size(590, 82);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "7521 9991 8531 9991 7452";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -238,6 +239,14 @@
             this.toolStripButton3.Size = new System.Drawing.Size(84, 21);
             this.toolStripButton3.Text = "清空";
             this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(84, 21);
+            this.toolStripButton1.Text = "添加库2";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStrip1
             // 
@@ -330,14 +339,6 @@
             // fontDialog1
             // 
             this.fontDialog1.Color = System.Drawing.SystemColors.ControlText;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(84, 21);
-            this.toolStripButton1.Text = "添加库2";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // frmChouchamoshi
             // 
