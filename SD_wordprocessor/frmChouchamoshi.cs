@@ -40,7 +40,7 @@ namespace SD_wordprocessor
         DataTable qtyTable;
         public ReportForm reportForm;
         bool is_AdminIS;
-
+        string lastinput;
         public frmChouchamoshi(bool is_AdminIS1)
         {
             InitializeComponent();
@@ -50,6 +50,13 @@ namespace SD_wordprocessor
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            // MessageBox.Show("没找到,请重新确认");
+
+
+
+            Word_web_Server = new List<clsKeyWord_web_info>();
+
             clsAllnew BusinessHelp = new clsAllnew();
 
 
@@ -64,6 +71,11 @@ namespace SD_wordprocessor
 
             //this.textBox2.Text = "";
             txfind = this.textBox1.Text;
+            if (lastinput != null && lastinput.Replace(" ", "") == txfind.Replace(" ", ""))
+                return;
+
+            lastinput = txfind;
+
             string alltxfind = this.textBox1.Text;
             #region 判断单独4 个代码是不是一个 字的功能
             int stepmethod = 0;
@@ -83,6 +95,37 @@ namespace SD_wordprocessor
                         bew.Add(item);
 
                         Word_web_Server = Word_web_Server.Concat(bew).ToList();
+                    }
+
+                    //hanzi cha
+
+                    strSelect1 = "select * from Word_ku where zi ='" + fileTextall[iqqq].ToString() + "'";
+                    Orderinfolist_Server = new List<clsword_info>();
+                    Orderinfolist_Server = BusinessHelp.findWord(strSelect1);
+                    item = new clsKeyWord_web_info();
+                    if (Orderinfolist_Server.Count > 0)
+                    {
+                        item.word = Orderinfolist_Server[0].zhengtidaima;
+                        List<clsKeyWord_web_info> bew = new List<clsKeyWord_web_info>();
+                        bew.Add(item);
+
+                        Word_web_Server = Word_web_Server.Concat(bew).ToList();
+                    }
+                    else
+                    {
+                        if (txfind.Length == 4)
+                        {
+                            MessageBox.Show("未查到本条信息,或录入信息错误！" + fileTextall[iqqq]);
+
+                            List<clsKeyWord_web_info> bew = new List<clsKeyWord_web_info>();
+
+                            clsKeyWord_web_info addempty = new clsKeyWord_web_info();
+                            addempty.word = "未找到";
+
+                            bew.Add(addempty);
+                            Word_web_Server = Word_web_Server.Concat(bew).ToList();
+                        }
+
                     }
                 }
             }
@@ -191,6 +234,10 @@ namespace SD_wordprocessor
                 if (Aging_CaseListResult.Count == 0)
                 {
                     MessageBox.Show("未查到本条信息,或录入信息错误！" + txfind);
+                    clsKeyWord_web_info addempty = new clsKeyWord_web_info();
+                    addempty.word = "未找到";
+
+                    Aging_CaseListResult.Add(addempty);
 
                 }
                 Word_web_Server = Word_web_Server.Concat(Aging_CaseListResult).ToList();
