@@ -88,6 +88,7 @@ namespace SD_wordprocessor
                     Orderinfolist_Server = new List<clsword_info>();
                     Orderinfolist_Server = BusinessHelp.findWord(strSelect1);
                     clsKeyWord_web_info item = new clsKeyWord_web_info();
+                    int shifouzhaodao = 0;
                     if (Orderinfolist_Server.Count > 0)
                     {
                         item.word = Orderinfolist_Server[0].zi;
@@ -95,6 +96,8 @@ namespace SD_wordprocessor
                         bew.Add(item);
 
                         Word_web_Server = Word_web_Server.Concat(bew).ToList();
+
+                        shifouzhaodao++;
                     }
 
                     //hanzi cha
@@ -110,8 +113,9 @@ namespace SD_wordprocessor
                         bew.Add(item);
 
                         Word_web_Server = Word_web_Server.Concat(bew).ToList();
+                        shifouzhaodao++;
                     }
-                    else
+                    if (shifouzhaodao == 0)
                     {
                         if (txfind.Length == 4)
                         {
